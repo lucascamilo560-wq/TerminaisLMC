@@ -2,6 +2,11 @@ const ALPHA_PRO_URL = 'https://play.google.com/store/apps/details?id=com.lmc.alp
 const DIVIDE_AI_URL = 'https://play.google.com/store/apps/details?id=com.divideai.app'
 const INSTAGRAM_URL = 'https://www.instagram.com/terminaislmc/'
 
+function scrollToSection(id: string) {
+  const el = document.getElementById(id)
+  if (el) el.scrollIntoView({ behavior: 'smooth' })
+}
+
 function CandleIcon() {
   return (
     <svg className="card-svg-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -62,33 +67,29 @@ function App() {
           </h1>
 
           <p className="hero-subtitle">
-            Alpha Pro Terminal e Divide Aí: apps para quem não vive no improviso.
+            Apps para quem não vive no improviso.
+          </p>
+
+          <p className="hero-support">
+            Escolha o que você precisa controlar hoje.
           </p>
 
           <div className="hero-buttons">
-            <a
-              href={ALPHA_PRO_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => scrollToSection('card-alpha')}
               className="btn btn-primary"
             >
-              <span className="btn-icon" aria-hidden="true">↗</span>
-              Baixar Alpha Pro
-            </a>
-            <a
-              href={DIVIDE_AI_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              <span className="btn-icon" aria-hidden="true">📈</span>
+              Operações e risco no trading
+            </button>
+            <button
+              onClick={() => scrollToSection('card-divide')}
               className="btn btn-secondary"
             >
-              <span className="btn-icon" aria-hidden="true">↗</span>
-              Baixar Divide Aí
-            </a>
+              <span className="btn-icon" aria-hidden="true">💳</span>
+              Despesas e contas compartilhadas
+            </button>
           </div>
-
-          <p className="hero-tagline">
-            Sem promessa. Sem complicação. Apenas ferramentas práticas para problemas reais.
-          </p>
         </div>
         <div className="hero-glow" aria-hidden="true" />
       </header>
@@ -97,22 +98,22 @@ function App() {
       <section className="apps-section" id="apps">
         <div className="apps-inner">
           {/* Alpha Pro Terminal */}
-          <article className="card card-alpha">
+          <article className="card card-alpha" id="card-alpha">
             <div className="card-glow card-glow-alpha" aria-hidden="true" />
             <div className="card-header">
               <CandleIcon />
               <div className="card-badge card-badge-alpha">Trading</div>
             </div>
             <h2 className="card-title">Alpha Pro Terminal</h2>
-            <p className="card-subtitle">Controle, risco e disciplina para traders.</p>
+            <p className="card-subtitle">Para quem opera, mas não quer depender do improviso.</p>
             <p className="card-description">
-              Acompanhe operações, estratégias e gestão de risco com mais clareza e organização.
+              Controle operações, risco, estratégias e disciplina em um só ambiente.
             </p>
             <ul className="card-features">
-              <li>Controle operacional</li>
-              <li>Gestão de risco</li>
-              <li>Organização de estratégias</li>
-              <li>Apoio à disciplina</li>
+              <li>Acompanhe operações</li>
+              <li>Organize estratégias</li>
+              <li>Monitore risco</li>
+              <li>Apoie sua disciplina</li>
             </ul>
             <a
               href={ALPHA_PRO_URL}
@@ -120,7 +121,7 @@ function App() {
               rel="noopener noreferrer"
               className="btn btn-primary btn-full"
             >
-              Baixar Alpha Pro
+              Baixar Alpha Pro Terminal
             </a>
             <p className="card-disclaimer">
               <span aria-label="Aviso">⚠</span> Operar envolve riscos. O app não garante resultados.
@@ -128,22 +129,22 @@ function App() {
           </article>
 
           {/* Divide Aí */}
-          <article className="card card-divide">
+          <article className="card card-divide" id="card-divide">
             <div className="card-glow card-glow-divide" aria-hidden="true" />
             <div className="card-header">
               <SplitIcon />
               <div className="card-badge card-badge-divide">Finanças</div>
             </div>
             <h2 className="card-title card-title-divide">Divide Aí</h2>
-            <p className="card-subtitle">Despesas compartilhadas sem confusão.</p>
+            <p className="card-subtitle">Para quem divide contas e cansou da confusão.</p>
             <p className="card-description">
-              Organize contas, parcelas, vencimentos e valores a pagar ou receber com mais clareza.
+              Organize valores a pagar, valores a receber, parcelas, vencimentos e despesas compartilhadas com mais clareza.
             </p>
             <ul className="card-features">
               <li>Contas compartilhadas</li>
-              <li>Controle pessoal</li>
+              <li>Valores a pagar</li>
+              <li>Valores a receber</li>
               <li>Parcelas e vencimentos</li>
-              <li>Organização financeira</li>
             </ul>
             <a
               href={DIVIDE_AI_URL}
@@ -157,23 +158,57 @@ function App() {
         </div>
       </section>
 
-      {/* ══════════════ POR QUE EXISTE? ══════════════ */}
+      {/* ══════════════ MANIFESTO ══════════════ */}
       <section className="manifesto-section">
         <div className="manifesto-line" aria-hidden="true" />
-        <p className="manifesto-label">Por que existe?</p>
+        <p className="manifesto-label">Manifesto</p>
+        <h2 className="manifesto-title">Nem tudo é o que parece.</h2>
         <blockquote className="manifesto-quote">
-          Não criamos apps para enfeitar tela.<br />
-          Criamos ferramentas para problemas reais.
+          Por trás de uma operação existe risco.<br />
+          Por trás de uma conta dividida existe relação.<br />
+          Por trás da desorganização existe custo.
         </blockquote>
+        <p className="manifesto-text">
+          A Terminais LMC cria ferramentas para transformar ruído em clareza.
+        </p>
         <div className="manifesto-line" aria-hidden="true" />
+      </section>
+
+      {/* ══════════════ CONFIANÇA ══════════════ */}
+      <section className="trust-section">
+        <div className="trust-inner">
+          <div className="trust-item">
+            <span className="trust-icon" aria-hidden="true">✓</span>
+            <span>Apps publicados na Play Store</span>
+          </div>
+          <div className="trust-item">
+            <span className="trust-icon" aria-hidden="true">✓</span>
+            <span>Marca brasileira de software</span>
+          </div>
+          <div className="trust-item">
+            <span className="trust-icon" aria-hidden="true">✓</span>
+            <span>Foco em problemas reais</span>
+          </div>
+          <div className="trust-item">
+            <span className="trust-icon" aria-hidden="true">✓</span>
+            <span>Sem promessa, sem improviso</span>
+          </div>
+          <div className="trust-item">
+            <span className="trust-icon" aria-hidden="true">✓</span>
+            <span>Ferramentas práticas para controle</span>
+          </div>
+        </div>
       </section>
 
       {/* ══════════════ CONVERSÃO ══════════════ */}
       <section className="conversion-section">
         <div className="conversion-inner">
           <h2 className="conversion-title">
-            Escolha o app que resolve sua necessidade agora.
+            Menos improviso. Mais controle.
           </h2>
+          <p className="conversion-text">
+            Escolha o app que resolve sua necessidade agora.
+          </p>
           <div className="conversion-buttons">
             <a
               href={ALPHA_PRO_URL}
@@ -181,7 +216,7 @@ function App() {
               rel="noopener noreferrer"
               className="btn btn-primary"
             >
-              Quero mais controle nas operações
+              Quero controlar minhas operações
             </a>
             <a
               href={DIVIDE_AI_URL}
