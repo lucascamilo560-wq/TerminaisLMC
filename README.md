@@ -30,7 +30,7 @@ Aplicativo para organizar despesas pessoais e compartilhadas com mais clareza, c
 
 - Foco: finanças pessoais, despesas compartilhadas, grupos e organização
 - Plataforma: Android / Play Store
-- Link: **adicionar link oficial da Play Store**
+- Link: https://play.google.com/store/apps/details?id=com.divideai.app
 
 ## Objetivo deste projeto
 
@@ -118,9 +118,30 @@ Frases recomendadas:
 
 ## Próximos passos
 
-- [ ] Inicializar projeto Vite + React + TypeScript
-- [ ] Criar layout mobile-first
+- [x] Inicializar projeto Vite + React + TypeScript
+- [x] Criar layout mobile-first
 - [ ] Adicionar logo e identidade visual da Terminais LMC
-- [ ] Adicionar link oficial do Divide Aí na Play Store
+- [x] Adicionar link oficial do Divide Aí na Play Store
 - [ ] Publicar na Vercel
 - [ ] Colocar o link final na bio do Instagram
+
+## Instalação e desenvolvimento
+
+```bash
+npm install
+npm run dev
+```
+
+## Build para produção
+
+```bash
+npm run build
+```
+
+## Deploy na Vercel
+
+1. Conecte o repositório na [Vercel](https://vercel.com)
+2. Framework Preset: **Vite**
+3. Build Command: `npm run build`
+4. Output Directory: `dist`
+
