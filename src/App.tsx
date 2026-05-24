@@ -123,7 +123,7 @@ function App() {
               Baixar Alpha Pro
             </a>
             <p className="card-disclaimer">
-              ⚠ Operar envolve riscos. O app não garante resultados.
+              <span aria-label="Aviso">⚠</span> Operar envolve riscos. O app não garante resultados.
             </p>
           </article>
 
