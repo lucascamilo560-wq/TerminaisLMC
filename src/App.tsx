@@ -112,6 +112,44 @@ function App() {
         </Reveal>
       </section>
 
+      {/* ══════════════ 3b. ALPHA PRO — PREVIEW ══════════════ */}
+      <section className="app-preview-section">
+        <div className="app-preview-inner">
+          <Reveal>
+            <h2 className="app-preview-title app-preview-title--alpha">Veja o Alpha Pro na prática</h2>
+            <p className="app-preview-subtitle">Imagens reais do app ajudam você a entender como cada área funciona antes de baixar.</p>
+          </Reveal>
+          <div className="app-preview-grid">
+            {[
+              { src: '/screenshots/alpha-pro/simulador.png', label: 'Simulador', text: 'Teste operações sem dinheiro real.' },
+              { src: '/screenshots/alpha-pro/alpha-forge.png', label: 'Alpha Forge', text: 'Crie e organize robôs e estratégias.' },
+              { src: '/screenshots/alpha-pro/ordens-abertas.png', label: 'Ordens Abertas', text: 'Acompanhe posições e operações em andamento.' },
+              { src: '/screenshots/alpha-pro/real-core.png', label: 'Real Core', text: 'Área de operação real para planos avançados.' },
+            ].map((item) => (
+              <Reveal className="app-shot-card app-shot-card--alpha" key={item.label}>
+                <div className="app-shot-frame">
+                  <img
+                    src={item.src}
+                    alt={item.label}
+                    className="app-shot-image"
+                    onError={(e) => {
+                      (e.currentTarget as HTMLImageElement).classList.add('is-missing')
+                    }}
+                  />
+                  <div className="app-shot-placeholder">
+                    <span className="app-shot-placeholder__icon" aria-hidden="true">📱</span>
+                    <span className="app-shot-placeholder__text">Adicionar print real</span>
+                    <span className="app-shot-placeholder__module">{item.label}</span>
+                  </div>
+                </div>
+                <p className="app-shot-label">{item.label}</p>
+                <p className="app-shot-text">{item.text}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ══════════════ 4. ALPHA PRO — JORNADA NA PRÁTICA ══════════════ */}
       <section className="journey-section">
         <div className="journey-inner">
@@ -324,6 +362,44 @@ function App() {
             </p>
           </div>
         </Reveal>
+      </section>
+
+      {/* ══════════════ 8b. DIVIDE AÍ — PREVIEW ══════════════ */}
+      <section className="app-preview-section app-preview-section--divide">
+        <div className="app-preview-inner">
+          <Reveal>
+            <h2 className="app-preview-title app-preview-title--divide">Veja o Divide Aí na prática</h2>
+            <p className="app-preview-subtitle">Entenda como o app organiza contas, divisões e vencimentos.</p>
+          </Reveal>
+          <div className="app-preview-grid">
+            {[
+              { src: '/screenshots/divide-ai/dashboard.png', label: 'Dashboard', text: 'Visão geral da organização financeira.' },
+              { src: '/screenshots/divide-ai/controle-pessoal.png', label: 'Controle Pessoal', text: 'Acompanhe valores, compromissos e rotina financeira.' },
+              { src: '/screenshots/divide-ai/minhas-divisoes.png', label: 'Minhas Divisões', text: 'Organize contas compartilhadas com outras pessoas.' },
+              { src: '/screenshots/divide-ai/agenda.png', label: 'Agenda', text: 'Acompanhe vencimentos e compromissos financeiros.' },
+            ].map((item) => (
+              <Reveal className="app-shot-card app-shot-card--divide" key={item.label}>
+                <div className="app-shot-frame">
+                  <img
+                    src={item.src}
+                    alt={item.label}
+                    className="app-shot-image"
+                    onError={(e) => {
+                      (e.currentTarget as HTMLImageElement).classList.add('is-missing')
+                    }}
+                  />
+                  <div className="app-shot-placeholder">
+                    <span className="app-shot-placeholder__icon" aria-hidden="true">📱</span>
+                    <span className="app-shot-placeholder__text">Adicionar print real</span>
+                    <span className="app-shot-placeholder__module">{item.label}</span>
+                  </div>
+                </div>
+                <p className="app-shot-label">{item.label}</p>
+                <p className="app-shot-text">{item.text}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* ══════════════ 9. DIVIDE AÍ — JORNADA NA PRÁTICA ══════════════ */}
@@ -573,6 +649,7 @@ function App() {
           <span className="footer-lmc">LMC</span>
           <span className="footer-name">Terminais LMC</span>
         </div>
+        <p className="footer-tagline">Ferramentas digitais para controle real.</p>
         <div className="footer-links">
           <a
             href={INSTAGRAM_URL}
@@ -605,13 +682,17 @@ function App() {
             Contato
           </a>
           <a
-            href="#termos"
+            href="/termos-de-uso.html"
+            target="_blank"
+            rel="noopener noreferrer"
             className="footer-link"
           >
             Termos de Uso
           </a>
           <a
-            href="#privacidade"
+            href="/politica-de-privacidade.html"
+            target="_blank"
+            rel="noopener noreferrer"
             className="footer-link"
           >
             Política de Privacidade
@@ -620,37 +701,6 @@ function App() {
         <p className="footer-email">alphaterminallmc@hotmail.com</p>
         <p className="footer-copy">© {new Date().getFullYear()} Terminais LMC. Todos os direitos reservados.</p>
       </footer>
-
-      {/* ══════════════ TERMOS DE USO ══════════════ */}
-      <section className="legal-section" id="termos">
-        <div className="legal-inner">
-          <h2 className="legal-title">Termos de Uso</h2>
-          <div className="legal-body">
-            <p>Ao utilizar os aplicativos da Terminais LMC (Alpha Pro Terminal e Divide Aí), você concorda com os seguintes termos:</p>
-            <p><strong>1. Uso dos aplicativos:</strong> Os apps são ferramentas de organização e controle. Nenhum dos aplicativos garante resultados financeiros, lucros ou retornos.</p>
-            <p><strong>2. Responsabilidade:</strong> O uso dos apps é de inteira responsabilidade do usuário. A Terminais LMC não se responsabiliza por decisões financeiras, perdas ou danos decorrentes do uso.</p>
-            <p><strong>3. Operações de trading:</strong> O Alpha Pro Terminal oferece simulador e ferramentas de acompanhamento. Operar no mercado envolve riscos reais. Decisões de investimento são de responsabilidade exclusiva do usuário.</p>
-            <p><strong>4. Assinaturas:</strong> Alguns recursos são oferecidos mediante assinatura. As condições de pagamento e cancelamento seguem as políticas da plataforma de distribuição (Google Play).</p>
-            <p><strong>5. Alterações:</strong> Estes termos podem ser atualizados sem aviso prévio. O uso continuado dos apps implica aceitação das alterações.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════ POLÍTICA DE PRIVACIDADE ══════════════ */}
-      <section className="legal-section" id="privacidade">
-        <div className="legal-inner">
-          <h2 className="legal-title">Política de Privacidade</h2>
-          <div className="legal-body">
-            <p>A Terminais LMC respeita sua privacidade. Esta política explica como seus dados são tratados:</p>
-            <p><strong>1. Coleta de dados:</strong> Os apps podem coletar dados básicos de uso para funcionamento e melhoria dos serviços. Nenhum dado financeiro real do usuário é armazenado em servidores da Terminais LMC.</p>
-            <p><strong>2. Compartilhamento:</strong> Não vendemos, alugamos ou compartilhamos dados pessoais com terceiros para fins comerciais.</p>
-            <p><strong>3. Segurança:</strong> Utilizamos práticas de segurança para proteger os dados, mas nenhum sistema é completamente seguro.</p>
-            <p><strong>4. Serviços de terceiros:</strong> Os apps podem utilizar serviços de terceiros (como Google Play, Firebase) que possuem suas próprias políticas de privacidade.</p>
-            <p><strong>5. Contato:</strong> Para dúvidas sobre privacidade, entre em contato pelo e-mail alphaterminallmc@hotmail.com.</p>
-            <p><strong>6. Alterações:</strong> Esta política pode ser atualizada periodicamente. Recomendamos consulta regular.</p>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }
