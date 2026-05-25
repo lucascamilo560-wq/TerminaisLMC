@@ -1,3 +1,5 @@
+import React from 'react'
+
 const ALPHA_PRO_URL = 'https://play.google.com/store/apps/details?id=com.lmc.alphaproterminal'
 const DIVIDE_AI_URL = 'https://play.google.com/store/apps/details?id=com.divideai.app'
 const INSTAGRAM_URL = 'https://www.instagram.com/terminaislmc/'
@@ -5,6 +7,26 @@ const INSTAGRAM_URL = 'https://www.instagram.com/terminaislmc/'
 function scrollToSection(id: string) {
   const el = document.getElementById(id)
   if (el) el.scrollIntoView({ behavior: 'smooth' })
+}
+
+function Reveal({ children, className = '' }: { children: React.ReactNode; className?: string }) {
+  const ref = React.useRef<HTMLDivElement>(null)
+  React.useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.classList.add('fade-in')
+          observer.unobserve(el)
+        }
+      },
+      { threshold: 0.12 }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+  return <div ref={ref} className={`reveal ${className}`}>{children}</div>
 }
 
 function App() {
@@ -51,22 +73,24 @@ function App() {
 
       {/* ══════════════ 2. MANIFESTO ══════════════ */}
       <section className="manifesto-section">
-        <div className="manifesto-line" aria-hidden="true" />
-        <h2 className="manifesto-title">Nem tudo é o que parece.</h2>
-        <blockquote className="manifesto-quote">
-          Por trás de uma operação existe risco.<br />
-          Por trás de uma conta dividida existe relação.<br />
-          Por trás da desorganização existe custo.
-        </blockquote>
-        <p className="manifesto-text">
-          A Terminais LMC cria ferramentas para transformar ruído em clareza.
-        </p>
-        <div className="manifesto-line" aria-hidden="true" />
+        <Reveal>
+          <div className="manifesto-line" aria-hidden="true" />
+          <h2 className="manifesto-title">Nem tudo é o que parece.</h2>
+          <blockquote className="manifesto-quote">
+            Por trás de uma operação existe risco.<br />
+            Por trás de uma conta dividida existe relação.<br />
+            Por trás da desorganização existe custo.
+          </blockquote>
+          <p className="manifesto-text">
+            A Terminais LMC cria ferramentas para transformar ruído em clareza.
+          </p>
+          <div className="manifesto-line" aria-hidden="true" />
+        </Reveal>
       </section>
 
       {/* ══════════════ 3. ALPHA PRO — VISÃO GERAL ══════════════ */}
       <section className="product-section" id="section-alpha">
-        <div className="product-inner">
+        <Reveal className="product-inner">
           <h2 className="product-title product-title--alpha">Alpha Pro Terminal</h2>
           <p className="product-call">
             Teste sua estratégia antes de colocar dinheiro real em risco.
@@ -83,7 +107,7 @@ function App() {
               Com ele, você pode começar no simulador, testar operações sem dinheiro real, acompanhar posições, organizar robôs, analisar histórico e, quando estiver pronto, evoluir para recursos de operação real com mais estrutura.
             </p>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ══════════════ 4. ALPHA PRO — COMO FUNCIONA ══════════════ */}
@@ -185,7 +209,7 @@ function App() {
             href={ALPHA_PRO_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-primary btn-full"
+            className="btn btn-primary btn-full btn-cta-pulse"
           >
             Baixar Alpha Pro Terminal
           </a>
@@ -194,7 +218,7 @@ function App() {
 
       {/* ══════════════ 7. DIVIDE AÍ — VISÃO GERAL ══════════════ */}
       <section className="product-section product-section--divide" id="section-divide">
-        <div className="product-inner">
+        <Reveal className="product-inner">
           <h2 className="product-title product-title--divide">Divide Aí</h2>
           <p className="product-call">
             Conta compartilhada sem clareza vira cobrança, esquecimento e desgaste.
@@ -215,7 +239,7 @@ function App() {
               Com o Divide Aí, você pode acompanhar valores a pagar, valores a receber, parcelas, vencimentos, divisões e compromissos financeiros em um só lugar.
             </p>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ══════════════ 8. DIVIDE AÍ — COMO FUNCIONA ══════════════ */}

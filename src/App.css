@@ -39,6 +39,31 @@ body {
   overflow-x: hidden;
 }
 
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.reveal {
+  opacity: 0;
+}
+
+.reveal.fade-in {
+  opacity: 1;
+}
+
 .app {
   min-height: 100vh;
   display: flex;
@@ -213,6 +238,15 @@ body {
   max-width: 340px;
 }
 
+@keyframes subtlePulse {
+  0%, 100% { box-shadow: 0 4px 20px rgba(0, 212, 255, 0.3), 0 0 0 1px rgba(0, 212, 255, 0.2); }
+  50% { box-shadow: 0 4px 30px rgba(0, 212, 255, 0.5), 0 0 0 1px rgba(0, 212, 255, 0.35); }
+}
+
+.btn-cta-pulse {
+  animation: subtlePulse 3s ease-in-out infinite;
+}
+
 .btn-sm {
   padding: 0.6rem 1.25rem;
   font-size: 0.85rem;
@@ -227,6 +261,9 @@ body {
   text-align: center;
   max-width: 700px;
   margin: 0 auto;
+}
+
+.manifesto-section .reveal {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -271,10 +308,27 @@ body {
 .product-section {
   padding: 5rem 1.5rem 3rem;
   border-top: 1px solid var(--border-cyan);
+  position: relative;
+}
+
+.product-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 120px;
+  background: radial-gradient(ellipse, var(--glow-cyan) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .product-section--divide {
   border-top-color: var(--border-green);
+}
+
+.product-section--divide::before {
+  background: radial-gradient(ellipse, var(--glow-green) 0%, transparent 70%);
 }
 
 .product-inner {
@@ -405,6 +459,36 @@ body {
   font-size: 0.9rem;
   color: var(--text-secondary);
   line-height: 1.65;
+}
+
+/* Feature card step counter */
+.feature-card {
+  counter-increment: feature-step;
+  position: relative;
+}
+
+.feature-card::after {
+  content: counter(feature-step, decimal-leading-zero);
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  opacity: 0.3;
+  letter-spacing: 0.05em;
+}
+
+.feature-card--alpha::after {
+  color: var(--accent-cyan);
+}
+
+.feature-card--divide::after {
+  color: var(--accent-green);
+}
+
+/* Feature section counter reset */
+.feature-section {
+  counter-reset: feature-step;
 }
 
 /* ─────────────────────────────────────────────
@@ -771,9 +855,5 @@ body {
 
   .conversion-title {
     font-size: 1.9rem;
-  }
-
-  .feature-cards {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   }
 }
