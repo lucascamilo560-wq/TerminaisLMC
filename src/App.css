@@ -994,41 +994,166 @@ body {
 }
 
 /* ─────────────────────────────────────────────
-   Legal Sections (Termos / Privacidade)
+   Footer Tagline
 ───────────────────────────────────────────── */
-.legal-section {
-  padding: 4rem 1.5rem;
-  border-top: 1px solid rgba(0, 212, 255, 0.06);
-  background: var(--bg-dark);
+.footer-tagline {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  font-weight: 500;
+  margin-bottom: 1.75rem;
+  letter-spacing: 0.01em;
 }
 
-.legal-inner {
-  max-width: 700px;
+/* ─────────────────────────────────────────────
+   App Preview / Screenshots
+───────────────────────────────────────────── */
+.app-preview-section {
+  padding: 4rem 1.5rem;
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-cyan);
+}
+
+.app-preview-section--divide {
+  border-top-color: var(--border-green);
+}
+
+.app-preview-inner {
+  max-width: var(--max-width);
   margin: 0 auto;
 }
 
-.legal-title {
-  font-size: 1.4rem;
+.app-preview-title {
+  font-size: 1.5rem;
   font-weight: 800;
-  color: var(--text-primary);
-  margin-bottom: 1.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
   letter-spacing: -0.02em;
 }
 
-.legal-body {
+.app-preview-title--alpha {
+  color: var(--accent-cyan);
+}
+
+.app-preview-title--divide {
+  color: var(--accent-green);
+}
+
+.app-preview-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  margin-bottom: 2.5rem;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.app-preview-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.app-shot-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.app-shot-card--alpha {
+  border: 1px solid var(--border-cyan);
+}
+
+.app-shot-card--divide {
+  border: 1px solid var(--border-green);
+}
+
+.app-shot-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0, 212, 255, 0.08);
+}
+
+.app-shot-card--divide:hover {
+  box-shadow: 0 8px 32px rgba(10, 245, 160, 0.08);
+}
+
+.app-shot-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  max-height: 320px;
+  margin: 0 auto 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #0d1120;
+  border: 2px solid rgba(0, 212, 255, 0.12);
+}
+
+.app-shot-card--divide .app-shot-frame {
+  border-color: rgba(10, 245, 160, 0.12);
+}
+
+.app-shot-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.app-shot-image.is-missing {
+  display: none;
+}
+
+.app-shot-placeholder {
+  position: absolute;
+  inset: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #111622 0%, #0d1120 100%);
+  z-index: 0;
 }
 
-.legal-body p {
-  font-size: 0.88rem;
-  color: var(--text-secondary);
-  line-height: 1.7;
+.app-shot-placeholder__icon {
+  font-size: 2rem;
+  opacity: 0.6;
 }
 
-.legal-body strong {
+.app-shot-placeholder__text {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.app-shot-placeholder__module {
+  font-size: 0.72rem;
+  color: var(--accent-cyan);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.app-shot-card--divide .app-shot-placeholder__module {
+  color: var(--accent-green);
+}
+
+.app-shot-label {
+  font-size: 0.95rem;
+  font-weight: 700;
   color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.app-shot-text {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
 }
 
 /* ─────────────────────────────────────────────
@@ -1070,6 +1195,10 @@ body {
     justify-content: center;
     gap: 2rem;
   }
+
+  .app-preview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* ─────────────────────────────────────────────
@@ -1106,5 +1235,9 @@ body {
 
   .modules-grid {
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+
+  .app-preview-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
