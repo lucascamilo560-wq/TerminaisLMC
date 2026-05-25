@@ -266,10 +266,10 @@ body {
 }
 
 /* ─────────────────────────────────────────────
-   Product Sections (Alpha Pro & Divide Aí)
+   Product Sections (overview)
 ───────────────────────────────────────────── */
 .product-section {
-  padding: 5rem 1.5rem;
+  padding: 5rem 1.5rem 3rem;
   border-top: 1px solid var(--border-cyan);
 }
 
@@ -306,22 +306,167 @@ body {
   font-weight: 600;
   color: var(--text-secondary);
   max-width: 600px;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   line-height: 1.5;
 }
 
-.product-desc {
+.product-body {
+  max-width: 640px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.product-body p {
   font-size: 0.95rem;
-  color: var(--text-muted);
-  max-width: 620px;
-  margin-bottom: 2.5rem;
-  line-height: 1.7;
+  color: var(--text-secondary);
+  line-height: 1.75;
 }
 
 .product-disclaimer {
   font-size: 0.8rem;
   color: var(--text-muted);
   font-style: italic;
+  max-width: 500px;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* ─────────────────────────────────────────────
+   Feature Cards (how app works)
+───────────────────────────────────────────── */
+.feature-section {
+  padding: 2rem 1.5rem 5rem;
+}
+
+.feature-section--divide {
+  /* no extra border needed, follows divide overview */
+}
+
+.feature-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.feature-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.feature-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: 1.75rem 1.5rem;
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+}
+
+.feature-card--alpha {
+  border: 1px solid var(--border-cyan);
+}
+
+.feature-card--alpha:hover {
+  box-shadow: 0 4px 24px var(--glow-cyan);
+}
+
+.feature-card--divide {
+  border: 1px solid var(--border-green);
+}
+
+.feature-card--divide:hover {
+  box-shadow: 0 4px 24px var(--glow-green);
+}
+
+.feature-card__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.6rem;
+}
+
+.feature-card--alpha .feature-card__title::before {
+  content: '▸ ';
+  color: var(--accent-cyan);
+}
+
+.feature-card--divide .feature-card__title::before {
+  content: '▸ ';
+  color: var(--accent-green);
+}
+
+.feature-card__text {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+/* ─────────────────────────────────────────────
+   Audience Section (para quem é)
+───────────────────────────────────────────── */
+.audience-section {
+  padding: 2rem 1.5rem 4rem;
+}
+
+.audience-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.audience-box {
+  background: var(--bg-surface);
+  border-radius: var(--radius);
+  padding: 2rem 1.75rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.audience-box--alpha {
+  border-left: 3px solid var(--accent-cyan);
+}
+
+.audience-box--divide {
+  border-left: 3px solid var(--accent-green);
+}
+
+.audience-box p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* ─────────────────────────────────────────────
+   Plans Section
+───────────────────────────────────────────── */
+.plans-section {
+  padding: 2rem 1.5rem 5rem;
+  border-bottom: 1px solid var(--border-cyan);
+}
+
+.plans-section--divide {
+  border-bottom-color: var(--border-green);
+}
+
+.plans-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.plans-note {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-align: center;
   max-width: 500px;
   margin-bottom: 1.5rem;
   line-height: 1.6;
@@ -440,7 +585,7 @@ body {
   font-size: 0.95rem;
   color: var(--text-secondary);
   line-height: 1.6;
-  max-width: 320px;
+  max-width: 360px;
 }
 
 .compare-card__app {
@@ -576,6 +721,10 @@ body {
     justify-content: center;
   }
 
+  .feature-cards {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
   .plan-blocks {
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   }
@@ -622,5 +771,9 @@ body {
 
   .conversion-title {
     font-size: 1.9rem;
+  }
+
+  .feature-cards {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   }
 }
