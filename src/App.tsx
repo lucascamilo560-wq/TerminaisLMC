@@ -122,7 +122,7 @@ function App() {
           <div className="app-preview-grid">
             {[
               { src: '/screenshots/alpha-pro/simulador.png', label: 'Simulador', text: 'Teste operações sem dinheiro real.' },
-              { src: '/screenshots/alpha-pro/alpha-forge.png', label: 'Alpha Forge', text: 'Crie e organize robôs e estratégias.' },
+              { src: '/screenshots/alpha-pro/Alpha-forge.png', label: 'Alpha Forge', text: 'Crie e organize robôs e estratégias.' },
               { src: '/screenshots/alpha-pro/ordens-abertas.png', label: 'Ordens Abertas', text: 'Acompanhe posições e operações em andamento.' },
               { src: '/screenshots/alpha-pro/real-core.png', label: 'Real Core', text: 'Área de operação real para planos avançados.' },
             ].map((item) => (
