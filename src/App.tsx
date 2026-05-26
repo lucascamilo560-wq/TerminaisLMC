@@ -5,7 +5,7 @@ const DIVIDE_AI_URL = 'https://play.google.com/store/apps/details?id=com.dividea
 const INSTAGRAM_URL = 'https://www.instagram.com/terminaislmc/'
 
 // Atualizar apenas com dados reais da Play Console.
-const SOCIAL_PROOF_USERS = '+1.000'
+const SOCIAL_PROOF_USERS = ''
 const SOCIAL_PROOF_APPS = '2 apps'
 const SOCIAL_PROOF_GOAL = '1 objetivo'
 const SOCIAL_PROOF_PROMISES = '0 promessas mágicas'
@@ -105,7 +105,7 @@ function App() {
               className="btn btn-primary btn-glow"
             >
               <span className="btn-shine" aria-hidden="true" />
-              Trading e operações
+              Simulação e estratégias
             </button>
             <button
               onClick={() => scrollToSection('section-divide')}
@@ -125,7 +125,7 @@ function App() {
           <div className="manifesto-line" aria-hidden="true" />
           <h2 className="manifesto-title">Nem tudo é o que parece.</h2>
           <blockquote className="manifesto-quote">
-            Por trás de uma operação existe risco.<br />
+            Por trás de uma decisão existe contexto.<br />
             Por trás de uma conta dividida existe relação.<br />
             Por trás da desorganização existe custo.
           </blockquote>
@@ -143,22 +143,19 @@ function App() {
             <h2 className="social-proof-title">Números que mostram a direção</h2>
           </Reveal>
           <div className="social-proof-grid">
-            <Reveal className="social-proof-card">
-              <span className="social-proof-number">{SOCIAL_PROOF_USERS}</span>
-              <p className="social-proof-label">usuários já testaram nossos apps</p>
-            </Reveal>
-            <Reveal className="social-proof-card">
-              <span className="social-proof-number">{SOCIAL_PROOF_APPS}</span>
-              <p className="social-proof-label">publicados na Play Store</p>
-            </Reveal>
-            <Reveal className="social-proof-card">
-              <span className="social-proof-number">{SOCIAL_PROOF_GOAL}</span>
-              <p className="social-proof-label">mais controle para a vida real</p>
-            </Reveal>
-            <Reveal className="social-proof-card">
-              <span className="social-proof-number">{SOCIAL_PROOF_PROMISES}</span>
-              <p className="social-proof-label">ferramentas práticas, não ilusões</p>
-            </Reveal>
+            {[
+              { number: SOCIAL_PROOF_USERS, label: 'usuários já testaram nossos apps' },
+              { number: SOCIAL_PROOF_APPS, label: 'publicados na Play Store' },
+              { number: SOCIAL_PROOF_GOAL, label: 'mais controle para a vida real' },
+              { number: SOCIAL_PROOF_PROMISES, label: 'ferramentas práticas, não ilusões' },
+            ]
+              .filter((item) => item.number.trim())
+              .map((item) => (
+                <Reveal className="social-proof-card" key={item.label}>
+                  <span className="social-proof-number">{item.number}</span>
+                  <p className="social-proof-label">{item.label}</p>
+                </Reveal>
+              ))}
           </div>
         </div>
       </section>
@@ -168,18 +165,17 @@ function App() {
         <Reveal className="product-inner">
           <h2 className="product-title product-title--alpha">Alpha Pro Terminal</h2>
           <p className="product-call">
-            Um app para traders que querem testar operações sem dinheiro real antes de arriscar capital.
+            Pratique antes de usar dinheiro real.
           </p>
           <div className="product-body">
             <p>
-              O simulador de trading do Alpha Pro foi criado para quem quer praticar, organizar estratégias e acompanhar operações com gestão de risco real.
+              O Alpha Pro Terminal é uma ferramenta para testar ideias em ambiente simulado, organizar estratégias, acompanhar posições e construir uma rotina operacional com mais controle.
             </p>
             <p>
-              O Alpha Pro não foi criado para oferecer atalhos.<br />
-              Ele foi criado para ajudar o trader a sair do improviso.
+              Comece pelo simulador, teste regras, acompanhe atividades, revise histórico e organize suas estratégias em um só lugar.
             </p>
             <p>
-              Com ele, você pode começar no simulador, testar robôs de trading, acompanhar posições, organizar estratégias, analisar histórico e, quando estiver pronto, evoluir para recursos de operação real com mais estrutura e controle.
+              O foco é prática, clareza e disciplina antes da decisão.
             </p>
           </div>
         </Reveal>
@@ -209,14 +205,14 @@ function App() {
         <div className="app-preview-inner">
           <Reveal>
             <h2 className="app-preview-title app-preview-title--alpha">Veja o Alpha Pro na prática</h2>
-            <p className="app-preview-subtitle">Imagens reais do app ajudam você a entender como cada área funciona antes de baixar.</p>
+            <p className="app-preview-subtitle">Conheça áreas do app voltadas à simulação, organização de estratégias e acompanhamento operacional.</p>
           </Reveal>
           <div className="app-preview-grid">
             {[
-              { src: '/screenshots/alpha-pro/simulador.png', label: 'Simulador', text: 'Teste operações sem dinheiro real.' },
-              { src: '/screenshots/alpha-pro/Alpha-forge.png', label: 'Alpha Forge', text: 'Crie e organize robôs e estratégias.' },
-              { src: '/screenshots/alpha-pro/ordens-abertas.png', label: 'Ordens Abertas', text: 'Acompanhe posições e operações em andamento.' },
-              { src: '/screenshots/alpha-pro/real-core.png', label: 'Real Core', text: 'Área de operação real para planos avançados.' },
+              { src: '/screenshots/alpha-pro/simulador.png', label: 'Simulador', text: 'Pratique em ambiente simulado antes de usar dinheiro real.' },
+              { src: '/screenshots/alpha-pro/Alpha-forge.png', label: 'Alpha Forge', text: 'Organize regras, robôs e estratégias.' },
+              { src: '/screenshots/alpha-pro/ordens-abertas.png', label: 'Ordens Abertas', text: 'Acompanhe posições e atividades em andamento.' },
+              { src: '/screenshots/alpha-pro/real-core.png', label: 'Real Core', text: 'Área avançada para acompanhamento operacional com mais estrutura.' },
             ].map((item) => (
               <Reveal className="app-shot-card app-shot-card--alpha" key={item.label}>
                 <div className="app-shot-frame">
@@ -254,61 +250,61 @@ function App() {
               <div className="journey-step__content">
                 <h3 className="journey-step__title">Comece no simulador</h3>
                 <p className="journey-step__text">
-                  Teste operações sem dinheiro real em um ambiente feito para treino, prática e disciplina.
+                  Pratique em ambiente simulado antes de usar dinheiro real.
                 </p>
               </div>
             </Reveal>
             <Reveal className="journey-step journey-step--alpha">
               <span className="journey-step__number">2</span>
               <div className="journey-step__content">
-                <h3 className="journey-step__title">Escolha o ativo e pratique sua leitura</h3>
+                <h3 className="journey-step__title">Escolha um ativo e observe o contexto</h3>
                 <p className="journey-step__text">
-                  Acompanhe ativos, observe o comportamento do mercado e teste decisões sem expor capital real.
+                  Acompanhe movimentos, teste leituras e pratique decisões em um ambiente controlado.
                 </p>
               </div>
             </Reveal>
             <Reveal className="journey-step journey-step--alpha">
               <span className="journey-step__number">3</span>
               <div className="journey-step__content">
-                <h3 className="journey-step__title">Teste operações e robôs</h3>
+                <h3 className="journey-step__title">Teste regras e estratégias</h3>
                 <p className="journey-step__text">
-                  Use robôs e estratégias para acompanhar entradas, saídas, posições abertas e regras operacionais.
+                  Use robôs e configurações para entender como uma estratégia se comporta.
                 </p>
               </div>
             </Reveal>
             <Reveal className="journey-step journey-step--alpha">
               <span className="journey-step__number">4</span>
               <div className="journey-step__content">
-                <h3 className="journey-step__title">Acompanhe posições, ordens e histórico</h3>
+                <h3 className="journey-step__title">Acompanhe posições e ordens</h3>
                 <p className="journey-step__text">
-                  Veja o que está aberto, o que foi executado e o que aconteceu depois da operação.
+                  Veja o que está em andamento e mantenha sua rotina organizada.
                 </p>
               </div>
             </Reveal>
             <Reveal className="journey-step journey-step--alpha">
               <span className="journey-step__number">5</span>
               <div className="journey-step__content">
-                <h3 className="journey-step__title">Ajuste sua estratégia no Alpha Forge</h3>
+                <h3 className="journey-step__title">Revise seu histórico</h3>
                 <p className="journey-step__text">
-                  Organize ideias, regras e robôs para sair do impulso e trabalhar com lógica e disciplina.
+                  Use registros anteriores para entender padrões, decisões e ajustes necessários.
                 </p>
               </div>
             </Reveal>
             <Reveal className="journey-step journey-step--alpha">
               <span className="journey-step__number">6</span>
               <div className="journey-step__content">
-                <h3 className="journey-step__title">Evolua para operação real com estrutura</h3>
+                <h3 className="journey-step__title">Organize tudo no Alpha Forge</h3>
                 <p className="journey-step__text">
-                  Nos planos avançados, conecte corretoras compatíveis, configure o trading e acompanhe operações reais com mais controle.
+                  Transforme ideias em regras mais claras e reduza decisões por impulso.
                 </p>
               </div>
             </Reveal>
             <Reveal className="journey-step journey-step--alpha">
               <span className="journey-step__number">7</span>
               <div className="journey-step__content">
-                <h3 className="journey-step__title">Amplie sua visão operacional</h3>
+                <h3 className="journey-step__title">Evolua com mais estrutura</h3>
                 <p className="journey-step__text">
-                  No Alpha Pró, recursos como Scanner Global e Data Hub Ômega ajudam a observar mais informações em um só ambiente.
+                  Nos planos avançados, acesse recursos adicionais de acompanhamento, conexão e configuração.
                 </p>
               </div>
             </Reveal>
@@ -341,7 +337,7 @@ function App() {
             </div>
             <div className="module-card module-card--alpha">
               <h3 className="module-card__title">Real Core</h3>
-              <p className="module-card__text">Área de operação real para usuários avançados.</p>
+              <p className="module-card__text">Área avançada para acompanhamento operacional com mais estrutura.</p>
             </div>
             <div className="module-card module-card--alpha">
               <h3 className="module-card__title">Conexões</h3>
@@ -364,7 +360,7 @@ function App() {
         <div className="audience-inner">
           <div className="audience-box audience-box--alpha">
             <p>
-              O Alpha Pro é para quem quer praticar, testar robôs de trading, acompanhar gestão de risco, organizar estratégias e operar com mais disciplina.
+              Escolha o Alpha Pro se você quer praticar em ambiente simulado, organizar estratégias, acompanhar robôs, revisar histórico e criar uma rotina operacional com mais disciplina.
             </p>
             <p>
               Não é para quem procura resultados sem esforço.<br />
@@ -397,7 +393,7 @@ function App() {
                 <li>Configuração de Trading</li>
                 <li>Comunidade</li>
                 <li>Assistente IA</li>
-                <li>Recursos de operação real</li>
+                <li>Recursos avançados de acompanhamento</li>
               </ul>
             </div>
             <div className="plan-block">
@@ -413,7 +409,7 @@ function App() {
           </div>
 
           <p className="product-disclaimer">
-            ⚠ Operar envolve riscos. O app não garante resultados e não substitui conhecimento, análise e responsabilidade do trader.
+            ⚠ O app não garante desempenho e não substitui conhecimento, análise e responsabilidade do usuário.
           </p>
 
           <a
@@ -691,7 +687,7 @@ function App() {
             <div className="compare-card compare-card--alpha">
               <p className="compare-card__app">Alpha Pro Terminal</p>
               <p className="compare-card__text">
-                Escolha o Alpha Pro se você quer testar operações, organizar estratégias, acompanhar robôs de trading, monitorar gestão de risco e operar com mais disciplina.
+                Escolha o Alpha Pro se você quer praticar em ambiente simulado, organizar estratégias, acompanhar robôs, revisar histórico e criar uma rotina operacional com mais disciplina.
               </p>
               <a
                 href={ALPHA_PRO_URL}
@@ -781,7 +777,7 @@ function App() {
                 a: 'Você pode baixar e conhecer os apps. Alguns recursos avançados podem depender de assinatura.',
               },
               {
-                q: 'O Alpha Pro usa dinheiro real no simulador?',
+                q: 'O simulador usa dinheiro real?',
                 a: 'Não. O simulador serve para prática, organização e teste em ambiente simulado.',
               },
               {
