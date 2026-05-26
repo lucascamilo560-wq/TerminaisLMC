@@ -4,6 +4,12 @@ const ALPHA_PRO_URL = 'https://play.google.com/store/apps/details?id=com.lmc.alp
 const DIVIDE_AI_URL = 'https://play.google.com/store/apps/details?id=com.divideai.app'
 const INSTAGRAM_URL = 'https://www.instagram.com/terminaislmc/'
 
+// Atualizar apenas com dados reais da Play Console.
+const SOCIAL_PROOF_USERS = '+1.000'
+const SOCIAL_PROOF_APPS = '2 apps'
+const SOCIAL_PROOF_GOAL = '1 objetivo'
+const SOCIAL_PROOF_PROMISES = '0 promessas mágicas'
+
 function scrollToSection(id: string) {
   const el = document.getElementById(id)
   if (el) el.scrollIntoView({ behavior: 'smooth' })
@@ -90,6 +96,33 @@ function App() {
         </Reveal>
       </section>
 
+      {/* ══════════════ 2b. NÚMEROS ══════════════ */}
+      <section className="social-proof-section">
+        <div className="social-proof-inner">
+          <Reveal>
+            <h2 className="social-proof-title">Números que mostram a direção</h2>
+          </Reveal>
+          <div className="social-proof-grid">
+            <Reveal className="social-proof-card">
+              <span className="social-proof-number">{SOCIAL_PROOF_USERS}</span>
+              <p className="social-proof-label">usuários já testaram nossos apps</p>
+            </Reveal>
+            <Reveal className="social-proof-card">
+              <span className="social-proof-number">{SOCIAL_PROOF_APPS}</span>
+              <p className="social-proof-label">publicados na Play Store</p>
+            </Reveal>
+            <Reveal className="social-proof-card">
+              <span className="social-proof-number">{SOCIAL_PROOF_GOAL}</span>
+              <p className="social-proof-label">mais controle para a vida real</p>
+            </Reveal>
+            <Reveal className="social-proof-card">
+              <span className="social-proof-number">{SOCIAL_PROOF_PROMISES}</span>
+              <p className="social-proof-label">ferramentas práticas, não ilusões</p>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
       {/* ══════════════ 3. ALPHA PRO — VISÃO GERAL ══════════════ */}
       <section className="product-section" id="section-alpha">
         <Reveal className="product-inner">
@@ -102,7 +135,7 @@ function App() {
               O simulador de trading do Alpha Pro foi criado para quem quer praticar, organizar estratégias e acompanhar operações com gestão de risco real.
             </p>
             <p>
-              O Alpha Pro não foi criado para prometer lucro.<br />
+              O Alpha Pro não foi criado para oferecer atalhos.<br />
               Ele foi criado para ajudar o trader a sair do improviso.
             </p>
             <p>
@@ -110,6 +143,25 @@ function App() {
             </p>
           </div>
         </Reveal>
+      </section>
+
+      {/* ══════════════ 3a. ALPHA PRO — ANTES E DEPOIS ══════════════ */}
+      <section className="before-after-section">
+        <div className="before-after-inner">
+          <Reveal>
+            <h2 className="before-after-title before-after-title--alpha">Antes e depois do Alpha Pro</h2>
+          </Reveal>
+          <div className="before-after-grid">
+            <Reveal className="before-after-card before-after-card--before">
+              <span className="before-after-badge">Antes</span>
+              <p className="before-after-text">Ideias soltas, testes no impulso e pouca organização.</p>
+            </Reveal>
+            <Reveal className="before-after-card before-after-card--after before-after-card--alpha">
+              <span className="before-after-badge before-after-badge--after">Depois</span>
+              <p className="before-after-text">Simulação, histórico, regras, robôs e acompanhamento em um só ambiente.</p>
+            </Reveal>
+          </div>
+        </div>
       </section>
 
       {/* ══════════════ 3b. ALPHA PRO — PREVIEW ══════════════ */}
@@ -171,7 +223,7 @@ function App() {
               <div className="journey-step__content">
                 <h3 className="journey-step__title">Escolha o ativo e pratique sua leitura</h3>
                 <p className="journey-step__text">
-                  Acompanhe ativos de cripto, observe o comportamento do mercado e teste decisões sem expor capital real.
+                  Acompanhe ativos, observe o comportamento do mercado e teste decisões sem expor capital real.
                 </p>
               </div>
             </Reveal>
@@ -257,7 +309,7 @@ function App() {
             </div>
             <div className="module-card module-card--alpha">
               <h3 className="module-card__title">Scanner Global</h3>
-              <p className="module-card__text">Monitoramento ampliado de ativos e oportunidades.</p>
+              <p className="module-card__text">Monitoramento ampliado de ativos e informações do mercado.</p>
             </div>
             <div className="module-card module-card--alpha">
               <h3 className="module-card__title">Data Hub Ômega</h3>
@@ -275,7 +327,7 @@ function App() {
               O Alpha Pro é para quem quer praticar, testar robôs de trading, acompanhar gestão de risco, organizar estratégias e operar com mais disciplina.
             </p>
             <p>
-              Não é para quem procura promessa de lucro.<br />
+              Não é para quem procura resultados sem esforço.<br />
               É para quem entende que controle vem antes de resultado.
             </p>
           </div>
@@ -362,6 +414,25 @@ function App() {
             </p>
           </div>
         </Reveal>
+      </section>
+
+      {/* ══════════════ 8a. DIVIDE AÍ — ANTES E DEPOIS ══════════════ */}
+      <section className="before-after-section before-after-section--divide">
+        <div className="before-after-inner">
+          <Reveal>
+            <h2 className="before-after-title before-after-title--divide">Antes e depois do Divide Aí</h2>
+          </Reveal>
+          <div className="before-after-grid">
+            <Reveal className="before-after-card before-after-card--before">
+              <span className="before-after-badge">Antes</span>
+              <p className="before-after-text">Conta no WhatsApp, print perdido e cobrança esquecida.</p>
+            </Reveal>
+            <Reveal className="before-after-card before-after-card--after before-after-card--divide">
+              <span className="before-after-badge before-after-badge--after before-after-badge--divide">Depois</span>
+              <p className="before-after-text">Divisões, valores, vencimentos e participantes organizados.</p>
+            </Reveal>
+          </div>
+        </div>
       </section>
 
       {/* ══════════════ 8b. DIVIDE AÍ — PREVIEW ══════════════ */}
@@ -607,6 +678,76 @@ function App() {
                 Baixar Divide Aí
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════ 13b. HISTÓRIAS ILUSTRATIVAS ══════════════ */}
+      <section className="stories-section">
+        <div className="stories-inner">
+          <Reveal>
+            <h2 className="stories-title">Situações que nossos apps ajudam a resolver</h2>
+            <p className="stories-subtitle">Exemplos ilustrativos de uso. Depoimentos reais serão adicionados conforme forem coletados.</p>
+          </Reveal>
+          <div className="stories-grid">
+            <Reveal className="story-card story-card--alpha">
+              <span className="story-badge">História ilustrativa</span>
+              <p className="story-app">Alpha Pro</p>
+              <blockquote className="story-quote">"Consegui testar uma ideia no simulador antes de usar dinheiro real."</blockquote>
+            </Reveal>
+            <Reveal className="story-card story-card--alpha">
+              <span className="story-badge">História ilustrativa</span>
+              <p className="story-app">Alpha Pro</p>
+              <blockquote className="story-quote">"Ficou mais fácil organizar regras, robôs e histórico em um só lugar."</blockquote>
+            </Reveal>
+            <Reveal className="story-card story-card--divide">
+              <span className="story-badge story-badge--divide">História ilustrativa</span>
+              <p className="story-app story-app--divide">Divide Aí</p>
+              <blockquote className="story-quote">"Antes eu esquecia quem tinha pago. Agora consigo acompanhar melhor."</blockquote>
+            </Reveal>
+            <Reveal className="story-card story-card--divide">
+              <span className="story-badge story-badge--divide">História ilustrativa</span>
+              <p className="story-app story-app--divide">Divide Aí</p>
+              <blockquote className="story-quote">"Ajuda quando várias pessoas participam da mesma conta."</blockquote>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════ 13c. FAQ ══════════════ */}
+      <section className="faq-section">
+        <div className="faq-inner">
+          <Reveal>
+            <h2 className="faq-title">Dúvidas rápidas</h2>
+          </Reveal>
+          <div className="faq-list">
+            {[
+              {
+                q: 'Preciso pagar para baixar?',
+                a: 'Você pode baixar e conhecer os apps. Alguns recursos avançados podem depender de assinatura.',
+              },
+              {
+                q: 'O Alpha Pro usa dinheiro real no simulador?',
+                a: 'Não. O simulador serve para prática, organização e teste em ambiente simulado.',
+              },
+              {
+                q: 'O Divide Aí serve para casal, família e amigos?',
+                a: 'Sim. Ele foi criado para organizar contas compartilhadas entre pessoas.',
+              },
+              {
+                q: 'Os apps estão na Play Store?',
+                a: 'Sim. Alpha Pro Terminal e Divide Aí estão publicados na Play Store.',
+              },
+              {
+                q: 'A assinatura libera o quê?',
+                a: 'A assinatura libera recursos avançados dentro de cada app, conforme o plano disponível.',
+              },
+            ].map((item) => (
+              <Reveal key={item.q} className="faq-item">
+                <p className="faq-question">{item.q}</p>
+                <p className="faq-answer">{item.a}</p>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
