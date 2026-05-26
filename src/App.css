@@ -1419,17 +1419,21 @@ body {
 /* ─────────────────────────────────────────────
    Stories Section (Histórias ilustrativas)
 ───────────────────────────────────────────── */
-.stories-section {
+/* ─────────────────────────────────────────────
+   Play Store Proof Section
+───────────────────────────────────────────── */
+.play-proof-section {
   padding: 5rem 1.5rem;
   border-top: 1px solid var(--border-cyan);
+  background: var(--bg-surface);
 }
 
-.stories-inner {
+.play-proof-inner {
   max-width: var(--max-width);
   margin: 0 auto;
 }
 
-.stories-title {
+.play-proof-title {
   font-size: 1.5rem;
   font-weight: 800;
   text-align: center;
@@ -1438,96 +1442,131 @@ body {
   margin-bottom: 0.75rem;
 }
 
-.stories-subtitle {
+.play-proof-subtitle {
   text-align: center;
   color: var(--text-muted);
-  font-size: 0.85rem;
-  font-style: italic;
+  font-size: 0.88rem;
   max-width: 540px;
   margin: 0 auto 2.5rem;
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
-.stories-grid {
+.play-proof-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.25rem;
 }
 
-.story-card {
+.play-proof-card {
   background: var(--bg-card);
   border-radius: var(--radius);
   padding: 1.75rem 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 0.75rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.story-card:hover {
+.play-proof-card:hover {
   transform: translateY(-3px);
 }
 
-.story-card--alpha {
+.play-proof-card--alpha {
   border: 1px solid var(--border-cyan);
 }
 
-.story-card--alpha:hover {
+.play-proof-card--alpha:hover {
   box-shadow: 0 4px 24px var(--glow-cyan);
 }
 
-.story-card--divide {
+.play-proof-card--divide {
   border: 1px solid var(--border-green);
 }
 
-.story-card--divide:hover {
+.play-proof-card--divide:hover {
   box-shadow: 0 4px 24px var(--glow-green);
 }
 
-.story-badge {
-  display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 0.18rem 0.55rem;
-  border-radius: 5px;
-  background: rgba(0, 212, 255, 0.08);
-  color: var(--accent-cyan);
-  border: 1px solid rgba(0, 212, 255, 0.2);
-  align-self: flex-start;
-}
-
-.story-badge--divide {
-  background: rgba(10, 245, 160, 0.08);
-  color: var(--accent-green);
-  border-color: rgba(10, 245, 160, 0.2);
-}
-
-.story-app {
+.play-proof-app-name {
   font-size: 0.78rem;
   font-weight: 700;
-  color: var(--accent-cyan);
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
 
-.story-app--divide {
+.play-proof-card--alpha .play-proof-app-name {
+  color: var(--accent-cyan);
+}
+
+.play-proof-card--divide .play-proof-app-name {
   color: var(--accent-green);
 }
 
-.story-quote {
+.play-proof-rating {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #f5c542;
+}
+
+.play-proof-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  align-items: center;
+}
+
+.play-proof-count,
+.play-proof-installs {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.play-proof-review {
   font-size: 0.95rem;
   color: var(--text-secondary);
   line-height: 1.65;
   font-style: italic;
-  border: none;
-  padding: 0;
-  quotes: none;
+  margin: 0;
+}
+
+.play-proof-source {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  margin-top: auto;
+}
+
+.play-proof-btn {
+  display: inline-block;
+  padding: 0.55rem 1.25rem;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  align-self: flex-start;
+}
+
+.play-proof-btn:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.play-proof-btn--alpha {
+  background: rgba(0, 212, 255, 0.12);
+  color: var(--accent-cyan);
+  border: 1px solid var(--border-cyan);
+}
+
+.play-proof-btn--divide {
+  background: rgba(10, 245, 160, 0.1);
+  color: var(--accent-green);
+  border: 1px solid var(--border-green);
 }
 
 @media (min-width: 640px) {
-  .stories-grid {
+  .play-proof-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
