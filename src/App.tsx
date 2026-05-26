@@ -10,9 +10,49 @@ const SOCIAL_PROOF_APPS = '2 apps'
 const SOCIAL_PROOF_GOAL = '1 objetivo'
 const SOCIAL_PROOF_PROMISES = '0 promessas mágicas'
 
+// Preencher apenas com dados reais coletados na Play Store ou Play Console.
+const PLAY_STORE_PROOF = {
+  alpha: {
+    appName: 'Alpha Pro Terminal',
+    rating: '',
+    reviewCount: '',
+    installs: '',
+    storeUrl: ALPHA_PRO_URL,
+    reviews: [
+      {
+        text: '',
+        author: 'Usuário da Play Store',
+        stars: 5,
+      },
+    ],
+  },
+  divide: {
+    appName: 'Divide Aí',
+    rating: '',
+    reviewCount: '',
+    installs: '',
+    storeUrl: DIVIDE_AI_URL,
+    reviews: [
+      {
+        text: '',
+        author: 'Usuário da Play Store',
+        stars: 5,
+      },
+    ],
+  },
+}
+
 function scrollToSection(id: string) {
   const el = document.getElementById(id)
   if (el) el.scrollIntoView({ behavior: 'smooth' })
+}
+
+function hasPlayStoreData(): boolean {
+  const { alpha, divide } = PLAY_STORE_PROOF
+  return !!(
+    alpha.rating || alpha.reviewCount || alpha.installs || alpha.reviews?.[0]?.text ||
+    divide.rating || divide.reviewCount || divide.installs || divide.reviews?.[0]?.text
+  )
 }
 
 function Reveal({ children, className = '' }: { children: React.ReactNode; className?: string }) {
@@ -682,37 +722,51 @@ function App() {
         </div>
       </section>
 
-      {/* ══════════════ 13b. HISTÓRIAS ILUSTRATIVAS ══════════════ */}
-      <section className="stories-section">
-        <div className="stories-inner">
-          <Reveal>
-            <h2 className="stories-title">Situações que nossos apps ajudam a resolver</h2>
-            <p className="stories-subtitle">Exemplos ilustrativos de uso. Depoimentos reais serão adicionados conforme forem coletados.</p>
-          </Reveal>
-          <div className="stories-grid">
-            <Reveal className="story-card story-card--alpha">
-              <span className="story-badge">História ilustrativa</span>
-              <p className="story-app">Alpha Pro</p>
-              <blockquote className="story-quote">"Consegui testar uma ideia no simulador antes de usar dinheiro real."</blockquote>
+      {/* ══════════════ 13b. AVALIAÇÕES PLAY STORE ══════════════ */}
+      {hasPlayStoreData() && (
+        <section className="play-proof-section">
+          <div className="play-proof-inner">
+            <Reveal>
+              <h2 className="play-proof-title">Avaliações reais da Play Store</h2>
+              <p className="play-proof-subtitle">Comentários e sinais reais de usuários que baixaram nossos apps.</p>
             </Reveal>
-            <Reveal className="story-card story-card--alpha">
-              <span className="story-badge">História ilustrativa</span>
-              <p className="story-app">Alpha Pro</p>
-              <blockquote className="story-quote">"Ficou mais fácil organizar regras, robôs e histórico em um só lugar."</blockquote>
-            </Reveal>
-            <Reveal className="story-card story-card--divide">
-              <span className="story-badge story-badge--divide">História ilustrativa</span>
-              <p className="story-app story-app--divide">Divide Aí</p>
-              <blockquote className="story-quote">"Antes eu esquecia quem tinha pago. Agora consigo acompanhar melhor."</blockquote>
-            </Reveal>
-            <Reveal className="story-card story-card--divide">
-              <span className="story-badge story-badge--divide">História ilustrativa</span>
-              <p className="story-app story-app--divide">Divide Aí</p>
-              <blockquote className="story-quote">"Ajuda quando várias pessoas participam da mesma conta."</blockquote>
-            </Reveal>
+            <div className="play-proof-grid">
+              {[
+                { data: PLAY_STORE_PROOF.alpha, mod: 'alpha' },
+                { data: PLAY_STORE_PROOF.divide, mod: 'divide' },
+              ].map(({ data, mod }) => {
+                const review = data.reviews?.[0]
+                const hasContent = data.rating || data.reviewCount || data.installs || review?.text
+                if (!hasContent) return null
+                return (
+                  <Reveal key={mod} className={`play-proof-card play-proof-card--${mod}`}>
+                    <p className="play-proof-app-name">{data.appName}</p>
+                    {(data.rating || data.reviewCount || data.installs) && (
+                      <div className="play-proof-meta">
+                        {data.rating && <span className="play-proof-rating">★ {data.rating}</span>}
+                        {data.reviewCount && <span className="play-proof-count">{data.reviewCount} avaliações</span>}
+                        {data.installs && <span className="play-proof-installs">{data.installs} instalações</span>}
+                      </div>
+                    )}
+                    {review?.text && (
+                      <p className="play-proof-review">"{review.text}"</p>
+                    )}
+                    <p className="play-proof-source">Fonte: Google Play</p>
+                    <a
+                      href={data.storeUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`play-proof-btn play-proof-btn--${mod}`}
+                    >
+                      Ver na Play Store
+                    </a>
+                  </Reveal>
+                )
+              })}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* ══════════════ 13c. FAQ ══════════════ */}
       <section className="faq-section">
