@@ -200,44 +200,6 @@ function App() {
         </div>
       </section>
 
-      {/* ══════════════ 3b. ALPHA PRO — PREVIEW ══════════════ */}
-      <section className="app-preview-section">
-        <div className="app-preview-inner">
-          <Reveal>
-            <h2 className="app-preview-title app-preview-title--alpha">Veja o Alpha Pro na prática</h2>
-            <p className="app-preview-subtitle">Conheça áreas do app voltadas à simulação, organização de estratégias e acompanhamento operacional.</p>
-          </Reveal>
-          <div className="app-preview-grid">
-            {[
-              { src: '/screenshots/alpha-pro/simulador.png', label: 'Simulador', text: 'Pratique em ambiente simulado antes de usar dinheiro real.' },
-              { src: '/screenshots/alpha-pro/Alpha-forge.png', label: 'Alpha Forge', text: 'Organize regras, robôs e estratégias.' },
-              { src: '/screenshots/alpha-pro/ordens-abertas.png', label: 'Ordens Abertas', text: 'Acompanhe posições e atividades em andamento.' },
-              { src: '/screenshots/alpha-pro/real-core.png', label: 'Real Core', text: 'Área avançada para acompanhamento operacional com mais estrutura.' },
-            ].map((item) => (
-              <Reveal className="app-shot-card app-shot-card--alpha" key={item.label}>
-                <div className="app-shot-frame">
-                  <img
-                    src={item.src}
-                    alt={item.label}
-                    className="app-shot-image"
-                    onError={(e) => {
-                      (e.currentTarget as HTMLImageElement).classList.add('is-missing')
-                    }}
-                  />
-                  <div className="app-shot-placeholder">
-                    <span className="app-shot-placeholder__icon" aria-hidden="true">📱</span>
-                    <span className="app-shot-placeholder__text">Adicionar print real</span>
-                    <span className="app-shot-placeholder__module">{item.label}</span>
-                  </div>
-                </div>
-                <p className="app-shot-label">{item.label}</p>
-                <p className="app-shot-text">{item.text}</p>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ══════════════ 4. ALPHA PRO — JORNADA NA PRÁTICA ══════════════ */}
       <section className="journey-section">
         <div className="journey-inner">
@@ -467,44 +429,6 @@ function App() {
               <span className="before-after-badge before-after-badge--after before-after-badge--divide">Depois</span>
               <p className="before-after-text">Divisões, valores, vencimentos e participantes organizados.</p>
             </Reveal>
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════ 8b. DIVIDE AÍ — PREVIEW ══════════════ */}
-      <section className="app-preview-section app-preview-section--divide">
-        <div className="app-preview-inner">
-          <Reveal>
-            <h2 className="app-preview-title app-preview-title--divide">Veja o Divide Aí na prática</h2>
-            <p className="app-preview-subtitle">Entenda como o app organiza contas, divisões e vencimentos.</p>
-          </Reveal>
-          <div className="app-preview-grid">
-            {[
-              { src: '/screenshots/divide-ai/dashboard.png', label: 'Dashboard', text: 'Visão geral da organização financeira.' },
-              { src: '/screenshots/divide-ai/controle-pessoal.png', label: 'Controle Pessoal', text: 'Acompanhe valores, compromissos e rotina financeira.' },
-              { src: '/screenshots/divide-ai/minhas-divisoes.png', label: 'Minhas Divisões', text: 'Organize contas compartilhadas com outras pessoas.' },
-              { src: '/screenshots/divide-ai/agenda.png', label: 'Agenda', text: 'Acompanhe vencimentos e compromissos financeiros.' },
-            ].map((item) => (
-              <Reveal className="app-shot-card app-shot-card--divide" key={item.label}>
-                <div className="app-shot-frame">
-                  <img
-                    src={item.src}
-                    alt={item.label}
-                    className="app-shot-image"
-                    onError={(e) => {
-                      (e.currentTarget as HTMLImageElement).classList.add('is-missing')
-                    }}
-                  />
-                  <div className="app-shot-placeholder">
-                    <span className="app-shot-placeholder__icon" aria-hidden="true">📱</span>
-                    <span className="app-shot-placeholder__text">Adicionar print real</span>
-                    <span className="app-shot-placeholder__module">{item.label}</span>
-                  </div>
-                </div>
-                <p className="app-shot-label">{item.label}</p>
-                <p className="app-shot-text">{item.text}</p>
-              </Reveal>
-            ))}
           </div>
         </div>
       </section>
