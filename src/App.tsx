@@ -105,7 +105,7 @@ function App() {
               className="btn btn-primary btn-glow"
             >
               <span className="btn-shine" aria-hidden="true" />
-              Simulação e estratégias
+              Terminal de trading
             </button>
             <button
               onClick={() => scrollToSection('section-divide')}
@@ -165,14 +165,17 @@ function App() {
         <Reveal className="product-inner">
           <h2 className="product-title product-title--alpha">Alpha Pro Terminal</h2>
           <p className="product-call">
-            Trading no celular com robôs, API e controle real.
+            Trading no celular com robôs, API e automação.
           </p>
           <div className="product-body">
             <p>
               Conecte Binance ou Bybit, configure robôs no Alpha Forge, acompanhe ordens, posições e histórico em um terminal criado para quem quer operar com mais estrutura.
             </p>
             <p className="product-complement">
-              Comece grátis pelo simulador e evolua para recursos avançados conforme sua necessidade.
+              Está começando no trading? Comece pelo simulador grátis, conheça a plataforma, teste estratégias e entenda como os robôs funcionam.
+            </p>
+            <p className="product-complement">
+              Quando estiver preparado, evolua para o Alpha Pró e libere recursos avançados para operar com automação, conexão API, modo real, Scanner, Data Hub e todos os benefícios do plano mais completo.
             </p>
           </div>
           <div className="product-actions">
@@ -186,7 +189,7 @@ function App() {
               Baixar Alpha Pro Terminal
             </a>
             <button
-              onClick={() => scrollToSection('section-alpha-features')}
+              onClick={() => scrollToSection('alpha-recursos')}
               className="btn btn-secondary btn-glow"
             >
               <span className="btn-shine" aria-hidden="true" />
@@ -197,80 +200,97 @@ function App() {
       </section>
 
       {/* ══════════════ 3a. ALPHA PRO — RECURSOS DO TERMINAL ══════════════ */}
-      <section className="terminal-features-section" id="section-alpha-features">
+      <section className="terminal-features-section" id="alpha-recursos">
         <div className="terminal-features-inner">
           <Reveal>
             <h2 className="terminal-features-title">Recursos do terminal</h2>
             <p className="terminal-features-subtitle">
-              Tudo o que você precisa para organizar, acompanhar e evoluir sua rotina operacional em um só ambiente.
+              Do simulador grátis ao Alpha Pró, o app foi criado para acompanhar sua evolução dentro de uma estrutura completa.
             </p>
           </Reveal>
           <div className="terminal-features-grid">
             <Reveal className="terminal-feature-card">
-              <h3 className="terminal-feature-card__title">Terminal real para centralizar sua rotina</h3>
+              <h3 className="terminal-feature-card__title">Terminal real no celular</h3>
               <p className="terminal-feature-card__text">
-                O Alpha Pro reúne em uma só tela o que normalmente fica espalhado: ordens abertas, posições, histórico, conexões, robôs e configurações.
+                O Alpha Pro centraliza módulos importantes para quem quer acompanhar sua rotina operacional com mais organização. Em vez de depender de várias telas soltas, o usuário encontra ordens, posições, histórico, conexões, robôs e configurações dentro de uma estrutura única.
               </p>
               <p className="terminal-feature-card__text">
-                A ideia é simples: menos improviso, mais estrutura para acompanhar o que está acontecendo.
+                Nos planos avançados, o Real Core libera uma camada voltada ao modo real, com recursos pensados para quem precisa acompanhar mais do que uma simples simulação.
               </p>
               <ul className="terminal-feature-card__list">
                 <li>Ordens abertas</li>
                 <li>Posições em andamento</li>
                 <li>Histórico operacional</li>
-                <li>Modo real nos planos avançados</li>
-                <li>Interface feita para acompanhamento rápido</li>
+                <li>Real Core nos planos avançados</li>
+                <li>Interface criada para acompanhamento rápido</li>
               </ul>
             </Reveal>
 
             <Reveal className="terminal-feature-card">
-              <h3 className="terminal-feature-card__title">Robôs com regras, não no chute</h3>
+              <h3 className="terminal-feature-card__title">Robôs e estratégias no Alpha Forge</h3>
               <p className="terminal-feature-card__text">
-                No Alpha Forge, você organiza estratégias, configura regras e acompanha robôs dentro do próprio terminal.
+                O Alpha Forge é a área onde o usuário organiza robôs, regras e estratégias. A ideia é transformar uma lógica solta em algo mais claro, configurável e fácil de acompanhar.
               </p>
               <p className="terminal-feature-card__text">
-                Em vez de depender só da intuição do momento, você transforma sua lógica em uma estrutura mais clara para testar, ajustar e acompanhar.
+                Antes de avançar para recursos reais, o usuário pode testar no simulador, ajustar parâmetros e entender como a estratégia se comporta dentro do terminal.
               </p>
               <ul className="terminal-feature-card__list">
-                <li>Criação de robôs</li>
+                <li>Criação e organização de robôs</li>
                 <li>Regras configuráveis</li>
-                <li>Estratégias organizadas</li>
-                <li>Teste no simulador</li>
-                <li>Uso avançado conforme o plano</li>
+                <li>Estratégias por lógica operacional</li>
+                <li>Testes no simulador</li>
+                <li>Evolução para recursos avançados conforme o plano</li>
               </ul>
             </Reveal>
 
             <Reveal className="terminal-feature-card">
-              <h3 className="terminal-feature-card__title">Conexão com Binance e Bybit</h3>
+              <h3 className="terminal-feature-card__title">Conexão API com Binance e Bybit</h3>
               <p className="terminal-feature-card__text">
-                Nos planos avançados, o Alpha Pro permite conexão por API com corretoras compatíveis, trazendo recursos reais para dentro do terminal.
+                Nos planos avançados, o Alpha Pro oferece conexão por API com corretoras compatíveis como Binance e Bybit. Essa integração permite usar recursos reais do terminal com mais centralização e controle dentro do app.
               </p>
               <p className="terminal-feature-card__text">
-                Você mantém sua rotina mais centralizada, com acesso a conexões, ordens, posições e ferramentas de acompanhamento em um ambiente próprio.
+                A conexão por API é uma das camadas mais importantes para quem quer sair do uso básico e evoluir para uma rotina mais estruturada.
               </p>
               <ul className="terminal-feature-card__list">
                 <li>API Binance</li>
                 <li>API Bybit</li>
-                <li>Conexões compatíveis</li>
+                <li>Integrações compatíveis</li>
                 <li>Recursos de modo real</li>
-                <li>Mais controle dentro do terminal</li>
+                <li>Operação e acompanhamento dentro do terminal</li>
               </ul>
             </Reveal>
 
             <Reveal className="terminal-feature-card">
-              <h3 className="terminal-feature-card__title">Simulador grátis para começar sem pressão</h3>
+              <h3 className="terminal-feature-card__title">Automação para quem quer mais estrutura</h3>
               <p className="terminal-feature-card__text">
-                O simulador não é o produto inteiro. Ele é a porta de entrada.
+                A automação no Alpha Pro não é apresentada como promessa de resultado. Ela é uma forma de organizar regras, executar estratégias configuradas e reduzir decisões feitas no impulso.
               </p>
               <p className="terminal-feature-card__text">
-                Você usa para conhecer o terminal, testar robôs, entender a lógica da plataforma e ganhar familiaridade antes de avançar para recursos reais.
+                Com robôs, regras e integrações compatíveis, o usuário pode evoluir do teste no simulador para uma rotina com mais recursos no Alpha Pró.
+              </p>
+              <ul className="terminal-feature-card__list">
+                <li>Robôs configuráveis</li>
+                <li>Estratégias organizadas</li>
+                <li>Execução conforme regras</li>
+                <li>Integração com recursos avançados</li>
+                <li>Mais controle sobre a rotina operacional</li>
+              </ul>
+            </Reveal>
+
+            <Reveal className="terminal-feature-card">
+              <h3 className="terminal-feature-card__title">Simulador grátis como porta de entrada</h3>
+              <p className="terminal-feature-card__text">
+                O simulador é gratuito porque ele é o primeiro passo da jornada. Ele permite conhecer o terminal, testar estratégias, entender os robôs e explorar a plataforma antes de partir para recursos avançados.
+              </p>
+              <p className="terminal-feature-card__text">
+                Para quem está começando, é o caminho ideal. Para quem quer ir além, o Alpha Pró libera a estrutura mais completa.
               </p>
               <ul className="terminal-feature-card__list">
                 <li>Entrada gratuita</li>
                 <li>Teste de estratégias</li>
-                <li>Robôs no ambiente simulado</li>
-                <li>Conhecimento da plataforma</li>
-                <li>Base antes do modo real</li>
+                <li>Robôs em ambiente simulado</li>
+                <li>Conhecimento inicial da plataforma</li>
+                <li>Evolução para o Alpha Pró</li>
               </ul>
             </Reveal>
           </div>
@@ -290,18 +310,131 @@ function App() {
             </Reveal>
             <Reveal className="before-after-card before-after-card--after before-after-card--alpha">
               <span className="before-after-badge before-after-badge--after">Depois</span>
-              <p className="before-after-text">Robôs, API, ordens, posições, histórico, simulador e modo real centralizados em um terminal no celular.</p>
+              <p className="before-after-text">Robôs, API, ordens, posições, histórico, simulador grátis, modo real e automação em um terminal moderno no celular.</p>
             </Reveal>
           </div>
         </div>
       </section>
 
-      {/* ══════════════ 4. ALPHA PRO — PLANOS ══════════════ */}
+      {/* ══════════════ 4. ALPHA PRO — JORNADA ══════════════ */}
+      <section className="journey-section">
+        <div className="journey-inner">
+          <Reveal>
+            <h2 className="journey-title journey-title--alpha">Jornada do Alpha</h2>
+          </Reveal>
+          <div className="journey-steps">
+            <Reveal className="journey-step journey-step--alpha">
+              <span className="journey-step__number">1</span>
+              <div className="journey-step__content">
+                <h3 className="journey-step__title">Comece pelo simulador grátis</h3>
+                <p className="journey-step__text">
+                  Conheça o terminal, teste estratégias e entenda como os robôs funcionam sem começar direto pelo modo real.
+                </p>
+              </div>
+            </Reveal>
+            <Reveal className="journey-step journey-step--alpha">
+              <span className="journey-step__number">2</span>
+              <div className="journey-step__content">
+                <h3 className="journey-step__title">Organize robôs no Alpha Forge</h3>
+                <p className="journey-step__text">
+                  Crie regras, ajuste parâmetros e transforme ideias em estratégias configuráveis.
+                </p>
+              </div>
+            </Reveal>
+            <Reveal className="journey-step journey-step--alpha">
+              <span className="journey-step__number">3</span>
+              <div className="journey-step__content">
+                <h3 className="journey-step__title">Conecte Binance ou Bybit</h3>
+                <p className="journey-step__text">
+                  Nos planos avançados, use conexão API com corretoras compatíveis para liberar recursos reais do terminal.
+                </p>
+              </div>
+            </Reveal>
+            <Reveal className="journey-step journey-step--alpha">
+              <span className="journey-step__number">4</span>
+              <div className="journey-step__content">
+                <h3 className="journey-step__title">Acompanhe ordens e posições</h3>
+                <p className="journey-step__text">
+                  Veja atividades em andamento, ordens abertas, posições e histórico em uma interface centralizada.
+                </p>
+              </div>
+            </Reveal>
+            <Reveal className="journey-step journey-step--alpha">
+              <span className="journey-step__number">5</span>
+              <div className="journey-step__content">
+                <h3 className="journey-step__title">Evolua para o Alpha Pró</h3>
+                <p className="journey-step__text">
+                  Libere automação, Scanner, Data Hub, modo real, conexões avançadas e a experiência mais completa do terminal.
+                </p>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════ 5. ALPHA PRO — MÓDULOS ══════════════ */}
+      <section className="modules-section">
+        <div className="modules-inner">
+          <Reveal>
+            <h2 className="modules-title modules-title--alpha">Módulos principais do Alpha</h2>
+          </Reveal>
+          <div className="modules-grid">
+            <div className="module-card module-card--alpha">
+              <h3 className="module-card__title">Simulador</h3>
+              <p className="module-card__text">Entrada gratuita para conhecer o terminal, testar estratégias e entender os robôs antes do modo real.</p>
+            </div>
+            <div className="module-card module-card--alpha">
+              <h3 className="module-card__title">Alpha Forge</h3>
+              <p className="module-card__text">Área para criar, organizar e ajustar robôs, regras e estratégias operacionais.</p>
+            </div>
+            <div className="module-card module-card--alpha">
+              <h3 className="module-card__title">Real Core</h3>
+              <p className="module-card__text">Camada avançada para recursos de modo real, acompanhamento e execução com mais estrutura.</p>
+            </div>
+            <div className="module-card module-card--alpha">
+              <h3 className="module-card__title">Conexões</h3>
+              <p className="module-card__text">Integração por API com Binance, Bybit e corretoras compatíveis.</p>
+            </div>
+            <div className="module-card module-card--alpha">
+              <h3 className="module-card__title">Ordens Abertas</h3>
+              <p className="module-card__text">Acompanhamento de ordens, posições e atividades em andamento.</p>
+            </div>
+            <div className="module-card module-card--alpha">
+              <h3 className="module-card__title">Histórico</h3>
+              <p className="module-card__text">Registro para revisar operações, decisões, ajustes e evolução da rotina.</p>
+            </div>
+            <div className="module-card module-card--alpha">
+              <h3 className="module-card__title">Scanner Global</h3>
+              <p className="module-card__text">Monitoramento ampliado de ativos e contexto operacional.</p>
+            </div>
+            <div className="module-card module-card--alpha">
+              <h3 className="module-card__title">Data Hub Ômega</h3>
+              <p className="module-card__text">Central de informações para apoiar leitura, análise e organização dentro do terminal.</p>
+            </div>
+            <div className="module-card module-card--alpha">
+              <h3 className="module-card__title">Assistente IA</h3>
+              <p className="module-card__text">Apoio inteligente para leitura, organização e orientação dentro do uso do app.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════ 6. ALPHA PRO — PLANOS ══════════════ */}
       <section className="plans-section">
         <div className="plans-inner">
+          <Reveal>
+            <h2 className="plans-title plans-title--alpha">Escolha o nível do seu terminal</h2>
+            <p className="plans-intro">
+              Comece grátis pelo simulador. Quando quiser evoluir, escolha o plano que libera os recursos que você precisa dentro do Alpha Pro Terminal.
+            </p>
+          </Reveal>
           <div className="plan-blocks">
             <div className="plan-block">
-              <h3 className="plan-block__title">Essencial</h3>
+              <h3 className="plan-block__title">Plano Essencial</h3>
+              <p className="plan-block__subtitle">Para começar pela plataforma.</p>
+              <p className="plan-block__text">
+                Ideal para conhecer o terminal, usar o simulador, organizar estratégias iniciais, acessar Alpha Forge, histórico, ordens abertas e recursos básicos do app.
+              </p>
               <ul className="plan-block__list">
                 <li>Simulador</li>
                 <li>Alpha Forge</li>
@@ -312,7 +445,11 @@ function App() {
               </ul>
             </div>
             <div className="plan-block">
-              <h3 className="plan-block__title">Avançado</h3>
+              <h3 className="plan-block__title">Plano Avançado</h3>
+              <p className="plan-block__subtitle">Para quem quer Real Core e conexões.</p>
+              <p className="plan-block__text">
+                Libera recursos avançados como Real Core, conexões compatíveis, configurações operacionais, comunidade, assistente IA e uma rotina mais completa dentro do terminal.
+              </p>
               <ul className="plan-block__list">
                 <li>Real Core</li>
                 <li>Conexões</li>
@@ -324,6 +461,10 @@ function App() {
             </div>
             <div className="plan-block">
               <h3 className="plan-block__title">Alpha Pró</h3>
+              <p className="plan-block__subtitle">Para quem quer a experiência completa.</p>
+              <p className="plan-block__text">
+                O plano mais completo do Alpha Pro, com automação, Scanner Global, Data Hub Ômega, experiência sem anúncios e acesso aos recursos mais avançados do terminal.
+              </p>
               <ul className="plan-block__list">
                 <li>Tudo do Avançado</li>
                 <li>Scanner Global</li>
@@ -341,15 +482,24 @@ function App() {
             ⚠ O app não garante desempenho e não substitui conhecimento, análise e responsabilidade do usuário.
           </p>
 
-          <a
-            href={ALPHA_PRO_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-primary btn-full btn-glow btn-cta-pulse"
-          >
-            <span className="btn-shine" aria-hidden="true" />
-            Baixar Alpha Pro Terminal
-          </a>
+          <div className="alpha-plan-actions">
+            <a
+              href={ALPHA_PRO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary btn-full btn-glow btn-cta-pulse"
+            >
+              <span className="btn-shine" aria-hidden="true" />
+              Começar pelo simulador grátis
+            </a>
+            <button
+              onClick={() => scrollToSection('section-alpha')}
+              className="btn btn-secondary btn-glow btn-full"
+            >
+              <span className="btn-shine" aria-hidden="true" />
+              Evoluir para o Alpha Pró
+            </button>
+          </div>
         </div>
       </section>
 
@@ -578,7 +728,7 @@ function App() {
             <div className="compare-card compare-card--alpha">
               <p className="compare-card__app">Alpha Pro Terminal</p>
               <p className="compare-card__text">
-                Escolha o Alpha Pro para operar no celular com estrutura profissional: robôs, API, ordens, posições, histórico e evolução do simulador ao modo real.
+                Escolha o Alpha Pro se você quer um terminal de trading no celular com robôs, Alpha Forge, conexão API com Binance e Bybit, modo real, ordens abertas, histórico, automação e simulador grátis para começar.
               </p>
               <a
                 href={ALPHA_PRO_URL}
@@ -587,7 +737,7 @@ function App() {
                 className="btn btn-primary btn-sm btn-glow"
               >
                 <span className="btn-shine" aria-hidden="true" />
-                Baixar Alpha Pro Terminal
+                Conhecer recursos avançados
               </a>
             </div>
             <div className="compare-card compare-card--divide">
@@ -710,7 +860,7 @@ function App() {
               className="btn btn-primary btn-glow"
             >
               <span className="btn-shine" aria-hidden="true" />
-              Quero conhecer o Alpha Pro
+              Evoluir para o Alpha Pró
             </a>
             <a
               href={DIVIDE_AI_URL}
