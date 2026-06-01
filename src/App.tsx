@@ -379,48 +379,48 @@ function App() {
             <h2 className="modules-title modules-title--alpha">Módulos principais do Alpha</h2>
           </Reveal>
           <div className="modules-grid">
-            <div className="module-card module-card--alpha">
+            <article className="module-card module-card--alpha">
               <h3 className="module-card__title">Simulador</h3>
               <p className="module-card__text">Entrada gratuita para conhecer o terminal, testar estratégias e entender os robôs antes do modo real.</p>
-            </div>
-            <div className="module-card module-card--alpha">
+            </article>
+            <article className="module-card module-card--alpha">
               <h3 className="module-card__title">Alpha Forge</h3>
               <p className="module-card__text">Área para criar, organizar e ajustar robôs, regras e estratégias operacionais.</p>
-            </div>
-            <div className="module-card module-card--alpha">
+            </article>
+            <article className="module-card module-card--alpha">
               <h3 className="module-card__title">Real Core</h3>
               <p className="module-card__text">Camada avançada para recursos de modo real, acompanhamento e execução com mais estrutura.</p>
-            </div>
-            <div className="module-card module-card--alpha">
+            </article>
+            <article className="module-card module-card--alpha">
               <h3 className="module-card__title">Conexões</h3>
               <p className="module-card__text">Integração por API com Binance, Bybit e corretoras compatíveis.</p>
-            </div>
-            <div className="module-card module-card--alpha">
+            </article>
+            <article className="module-card module-card--alpha">
               <h3 className="module-card__title">Ordens Abertas</h3>
               <p className="module-card__text">Acompanhamento de ordens, posições e atividades em andamento.</p>
-            </div>
-            <div className="module-card module-card--alpha">
+            </article>
+            <article className="module-card module-card--alpha">
               <h3 className="module-card__title">Histórico</h3>
               <p className="module-card__text">Registro para revisar operações, decisões, ajustes e evolução da rotina.</p>
-            </div>
-            <div className="module-card module-card--alpha">
+            </article>
+            <article className="module-card module-card--alpha">
               <h3 className="module-card__title">Scanner Global</h3>
               <p className="module-card__text">Monitoramento ampliado de ativos e contexto operacional.</p>
-            </div>
-            <div className="module-card module-card--alpha">
+            </article>
+            <article className="module-card module-card--alpha">
               <h3 className="module-card__title">Data Hub Ômega</h3>
               <p className="module-card__text">Central de informações para apoiar leitura, análise e organização dentro do terminal.</p>
-            </div>
-            <div className="module-card module-card--alpha">
+            </article>
+            <article className="module-card module-card--alpha">
               <h3 className="module-card__title">Assistente IA</h3>
               <p className="module-card__text">Apoio inteligente para leitura, organização e orientação dentro do uso do app.</p>
-            </div>
+            </article>
           </div>
         </div>
       </section>
 
       {/* ══════════════ 6. ALPHA PRO — PLANOS ══════════════ */}
-      <section className="plans-section">
+      <section className="plans-section" id="alpha-planos">
         <div className="plans-inner">
           <Reveal>
             <h2 className="plans-title plans-title--alpha">Escolha o nível do seu terminal</h2>
@@ -493,7 +493,7 @@ function App() {
               Começar pelo simulador grátis
             </a>
             <button
-              onClick={() => scrollToSection('section-alpha')}
+              onClick={() => scrollToSection('alpha-planos')}
               className="btn btn-secondary btn-glow btn-full"
             >
               <span className="btn-shine" aria-hidden="true" />
@@ -631,34 +631,34 @@ function App() {
             <h2 className="modules-title modules-title--divide">Módulos principais do Divide Aí</h2>
           </Reveal>
           <div className="modules-grid">
-            <div className="module-card module-card--divide">
+            <article className="module-card module-card--divide">
               <h3 className="module-card__title">Dashboard</h3>
               <p className="module-card__text">Visão geral da organização financeira.</p>
-            </div>
-            <div className="module-card module-card--divide">
+            </article>
+            <article className="module-card module-card--divide">
               <h3 className="module-card__title">Controle Pessoal</h3>
               <p className="module-card__text">Área para acompanhar valores, compromissos e rotina financeira individual.</p>
-            </div>
-            <div className="module-card module-card--divide">
+            </article>
+            <article className="module-card module-card--divide">
               <h3 className="module-card__title">Minhas Divisões</h3>
               <p className="module-card__text">Organização de contas compartilhadas.</p>
-            </div>
-            <div className="module-card module-card--divide">
+            </article>
+            <article className="module-card module-card--divide">
               <h3 className="module-card__title">Conexões</h3>
               <p className="module-card__text">Relação com pessoas que dividem despesas com você.</p>
-            </div>
-            <div className="module-card module-card--divide">
+            </article>
+            <article className="module-card module-card--divide">
               <h3 className="module-card__title">Agenda</h3>
               <p className="module-card__text">Acompanhamento de vencimentos e compromissos financeiros.</p>
-            </div>
-            <div className="module-card module-card--divide">
+            </article>
+            <article className="module-card module-card--divide">
               <h3 className="module-card__title">Perfil</h3>
               <p className="module-card__text">Configuração e dados do usuário.</p>
-            </div>
-            <div className="module-card module-card--divide">
+            </article>
+            <article className="module-card module-card--divide">
               <h3 className="module-card__title">Premium</h3>
               <p className="module-card__text">Recursos colaborativos, blocos financeiros, agenda compartilhada e exportação em PDF.</p>
-            </div>
+            </article>
           </div>
         </div>
       </section>
