@@ -1,7 +1,7 @@
 import React from 'react'
 
 const ALPHA_PRO_URL = 'https://play.google.com/store/apps/details?id=com.lmc.alphaproterminal'
-const DIVIDE_AI_URL = 'https://play.google.com/store/apps/details?id=com.divideai.app'
+const CONTROLE_AI_URL = 'https://play.google.com/store/apps/details?id=com.divideai.app'
 const INSTAGRAM_URL = 'https://www.instagram.com/terminaislmc/'
 
 // Atualizar apenas com dados reais da Play Console.
@@ -27,11 +27,11 @@ const PLAY_STORE_PROOF = {
     ],
   },
   divide: {
-    appName: 'Divide Aí',
+    appName: 'ControleAi',
     rating: '',
     reviewCount: '',
     installs: '',
-    storeUrl: DIVIDE_AI_URL,
+    storeUrl: CONTROLE_AI_URL,
     reviews: [
       {
         text: '',
@@ -503,10 +503,10 @@ function App() {
         </div>
       </section>
 
-      {/* ══════════════ 5. DIVIDE AÍ — VISÃO GERAL ══════════════ */}
+      {/* ══════════════ 5. CONTROLE AI — VISÃO GERAL ══════════════ */}
       <section className="product-section product-section--divide" id="section-divide">
         <Reveal className="product-inner">
-          <h2 className="product-title product-title--divide">Divide Aí</h2>
+          <h2 className="product-title product-title--divide">ControleAi</h2>
           <p className="product-call">
             O app para dividir contas sem transformar dinheiro em problema entre pessoas.
           </p>
@@ -515,7 +515,7 @@ function App() {
               Um organizador financeiro para casal, família, amigos e colegas de casa que compartilham despesas.
             </p>
             <p>
-              O Divide Aí foi criado para organizar valores a pagar e receber, despesas compartilhadas e contas de casa com mais clareza.
+              O ControleAi foi criado para organizar valores a pagar e receber, despesas compartilhadas e contas de casa com mais clareza.
             </p>
             <p>
               Porque uma conta mal combinada não vira só número.<br />
@@ -525,17 +525,17 @@ function App() {
               Vira discussão.
             </p>
             <p>
-              Com o Divide Aí, você pode acompanhar valores a pagar, valores a receber, parcelas, vencimentos, divisões e compromissos financeiros em um só lugar.
+              Com o ControleAi, você pode acompanhar valores a pagar, valores a receber, parcelas, vencimentos, divisões e compromissos financeiros em um só lugar.
             </p>
           </div>
         </Reveal>
       </section>
 
-      {/* ══════════════ 8a. DIVIDE AÍ — ANTES E DEPOIS ══════════════ */}
+      {/* ══════════════ 8a. CONTROLE AI — ANTES E DEPOIS ══════════════ */}
       <section className="before-after-section before-after-section--divide">
         <div className="before-after-inner">
           <Reveal>
-            <h2 className="before-after-title before-after-title--divide">Antes e depois do Divide Aí</h2>
+            <h2 className="before-after-title before-after-title--divide">Antes e depois do ControleAi</h2>
           </Reveal>
           <div className="before-after-grid">
             <Reveal className="before-after-card before-after-card--before">
@@ -550,11 +550,11 @@ function App() {
         </div>
       </section>
 
-      {/* ══════════════ 9. DIVIDE AÍ — JORNADA NA PRÁTICA ══════════════ */}
+      {/* ══════════════ 9. CONTROLE AI — JORNADA NA PRÁTICA ══════════════ */}
       <section className="journey-section journey-section--divide">
         <div className="journey-inner">
           <Reveal>
-            <h2 className="journey-title journey-title--divide">Como o Divide Aí funciona na prática</h2>
+            <h2 className="journey-title journey-title--divide">Como o ControleAi funciona na prática</h2>
           </Reveal>
           <div className="journey-steps">
             <Reveal className="journey-step journey-step--divide">
@@ -624,11 +624,11 @@ function App() {
         </div>
       </section>
 
-      {/* ══════════════ 10. DIVIDE AÍ — MÓDULOS ══════════════ */}
+      {/* ══════════════ 10. CONTROLE AI — MÓDULOS ══════════════ */}
       <section className="modules-section modules-section--divide">
         <div className="modules-inner">
           <Reveal>
-            <h2 className="modules-title modules-title--divide">Módulos principais do Divide Aí</h2>
+            <h2 className="modules-title modules-title--divide">Módulos principais do ControleAi</h2>
           </Reveal>
           <div className="modules-grid">
             <article className="module-card module-card--divide">
@@ -663,12 +663,12 @@ function App() {
         </div>
       </section>
 
-      {/* ══════════════ 11. DIVIDE AÍ — PARA QUEM É ══════════════ */}
+      {/* ══════════════ 11. CONTROLE AI — PARA QUEM É ══════════════ */}
       <section className="audience-section">
         <div className="audience-inner">
           <div className="audience-box audience-box--divide">
             <p>
-              O Divide Aí é para casais, famílias, amigos, colegas de casa, grupos de viagem e qualquer pessoa que divide despesas e quer menos confusão.
+              O ControleAi é para casais, famílias, amigos, colegas de casa, grupos de viagem e qualquer pessoa que divide despesas e quer menos confusão.
             </p>
             <p>
               Ele ajuda a transformar conta espalhada em organização visível.
@@ -677,7 +677,7 @@ function App() {
         </div>
       </section>
 
-      {/* ══════════════ 12. DIVIDE AÍ — PLANOS ══════════════ */}
+      {/* ══════════════ 12. CONTROLE AI — PLANOS ══════════════ */}
       <section className="plans-section plans-section--divide">
         <div className="plans-inner">
           <div className="plan-blocks">
@@ -709,13 +709,13 @@ function App() {
           </p>
 
           <a
-            href={DIVIDE_AI_URL}
+            href={CONTROLE_AI_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-divide btn-full btn-glow"
           >
             <span className="btn-shine" aria-hidden="true" />
-            Baixar Divide Aí
+            Baixar ControleAi
           </a>
         </div>
       </section>
@@ -741,18 +741,18 @@ function App() {
               </a>
             </div>
             <div className="compare-card compare-card--divide">
-              <p className="compare-card__app compare-card__app--divide">Divide Aí</p>
+              <p className="compare-card__app compare-card__app--divide">ControleAi</p>
               <p className="compare-card__text">
-                Escolha o Divide Aí se você quer organizar despesas compartilhadas, valores a pagar, valores a receber, parcelas, vencimentos e contas de casa.
+                Escolha o ControleAi se você quer organizar despesas compartilhadas, valores a pagar, valores a receber, parcelas, vencimentos e contas de casa.
               </p>
               <a
-                href={DIVIDE_AI_URL}
+                href={CONTROLE_AI_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-divide btn-sm btn-glow"
               >
                 <span className="btn-shine" aria-hidden="true" />
-                Baixar Divide Aí
+                Baixar ControleAi
               </a>
             </div>
           </div>
@@ -822,12 +822,12 @@ function App() {
                 a: 'Não. O simulador serve para prática, organização e teste em ambiente simulado.',
               },
               {
-                q: 'O Divide Aí serve para casal, família e amigos?',
+                q: 'O ControleAi serve para casal, família e amigos?',
                 a: 'Sim. Ele foi criado para organizar contas compartilhadas entre pessoas.',
               },
               {
                 q: 'Os apps estão na Play Store?',
-                a: 'Sim. Alpha Pro Terminal e Divide Aí estão publicados na Play Store.',
+                a: 'Sim. Alpha Pro Terminal e ControleAi estão publicados na Play Store.',
               },
               {
                 q: 'A assinatura libera o quê?',
@@ -863,13 +863,13 @@ function App() {
               Evoluir para o Alpha Pró
             </a>
             <a
-              href={DIVIDE_AI_URL}
+              href={CONTROLE_AI_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-divide btn-glow"
             >
               <span className="btn-shine" aria-hidden="true" />
-              Quero conhecer o Divide Aí
+              Quero conhecer o ControleAi
             </a>
           </div>
         </div>
@@ -900,12 +900,12 @@ function App() {
             Alpha Pro Terminal
           </a>
           <a
-            href={DIVIDE_AI_URL}
+            href={CONTROLE_AI_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="footer-link"
           >
-            Divide Aí
+            ControleAi
           </a>
           <a
             href="mailto:alphaterminallmc@hotmail.com"
