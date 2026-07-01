@@ -16,7 +16,7 @@ Controle, risco e disciplina para traders.
 
 - Link: https://play.google.com/store/apps/details?id=com.lmc.alphaproterminal
 
-### Divide Aí
+### ControleAi
 
 Despesas compartilhadas sem confusão.
 
