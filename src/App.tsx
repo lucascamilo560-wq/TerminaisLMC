@@ -88,7 +88,7 @@ function App() {
           </div>
 
           <h1 className="hero-title">
-            Ferramentas digitais<br className="br-desktop" /> para controle real.
+            <span className="terminal-header">&gt;</span> Ferramentas digitais<br className="br-desktop" /> para controle real<span className="cursor-blink"></span>
           </h1>
 
           <p className="hero-subtitle">
