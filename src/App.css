@@ -256,9 +256,13 @@ body {
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
-  opacity: 0.5;
+  opacity: 0;
   transition: opacity 0.3s ease;
   z-index: -1;
+}
+
+.btn-glow:hover::before {
+  opacity: 1;
 }
 
 .btn-glow:hover::before {
@@ -434,12 +438,9 @@ body {
 
 .manifesto-text {
   font-family: 'JetBrains Mono', monospace;
-}
-
-.manifesto-text {
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--accent-cyan);
+  color: var(--accent-green);
   letter-spacing: -0.01em;
 }
 
@@ -638,7 +639,6 @@ body {
   position: absolute;
   left: 0;
   color: var(--accent-green);
-  color: var(--accent-cyan);
   font-weight: 700;
 }
 
@@ -1474,18 +1474,6 @@ body {
 }
 .play-proof-card--divide:hover {
   box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
-}
-
-.play-proof-card--alpha:hover {
-  box-shadow: 0 4px 24px var(--glow-cyan);
-}
-
-.play-proof-card--divide {
-  border: 1px solid var(--border-green);
-}
-
-.play-proof-card--divide:hover {
-  box-shadow: 0 4px 24px var(--glow-green);
 }
 
 .play-proof-app-name {
