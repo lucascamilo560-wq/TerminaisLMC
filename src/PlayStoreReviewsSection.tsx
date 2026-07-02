@@ -21,7 +21,7 @@ export const PlayStoreReviewsSection: React.FC<PlayStoreReviewsSectionProps> = (
     const fetchReviews = async () => {
       try {
         setLoading(true);
-        const res = await fetch(`/api/play-reviews?app=${app}`);
+        const res = await fetch(`/api/play-reviews?app=${encodeURIComponent(app)}`);
         if (!res.ok) {
           throw new Error('Network response was not ok');
         }
@@ -54,7 +54,7 @@ export const PlayStoreReviewsSection: React.FC<PlayStoreReviewsSectionProps> = (
         
         <div className="play-proof-grid">
           {reviews.map((review, index) => (
-            <div key={index} className={`play-proof-card play-proof-card--${app}`}>
+            <div key={`${review.author_name}-${review.reviewed_at || index}`} className={`play-proof-card play-proof-card--${app}`}>
               <p className="play-proof-app-name">{review.app_name}</p>
               <div className="play-proof-meta">
                 <span className="play-proof-rating">★ {review.rating}</span>
