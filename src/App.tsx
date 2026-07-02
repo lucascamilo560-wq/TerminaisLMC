@@ -1,4 +1,5 @@
 import React from 'react'
+import { PlayStoreReviewsSection } from './PlayStoreReviewsSection'
 
 const ALPHA_PRO_URL = 'https://play.google.com/store/apps/details?id=com.lmc.alphaproterminal'
 const CONTROLE_AI_URL = 'https://play.google.com/store/apps/details?id=com.divideai.app'
@@ -804,6 +805,9 @@ function App() {
           </div>
         </section>
       )}
+
+      {/* ══════════════ 13b-2. AVALIAÇÕES DINÂMICAS ══════════════ */}
+      <PlayStoreReviewsSection app="alpha" />
 
       {/* ══════════════ 13c. FAQ ══════════════ */}
       <section className="faq-section">
