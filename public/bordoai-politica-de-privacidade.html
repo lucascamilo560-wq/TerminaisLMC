@@ -66,7 +66,7 @@
     <p>Esses dados são utilizados para fornecer as funções de organização marítima escolhidas pelo usuário.</p>
 
     <h2>3. Câmera, galeria, scanner, OCR e QR Code</h2>
-    <p>A câmera e a galeria são acessadas somente quando o usuário inicia uma digitalização ou escolhe uma imagem. O scanner pode corrigir bordas, gerar PDF, reconhecer texto e detectar QR Code usando componentes do Android, Google Play Services e Google ML Kit. O processamento ocorre no aparelho para auxiliar no preenchimento dos campos.</p>
+    <p>A câmera e a galeria são acessadas somente quando o usuário inicia uma digitalização ou escolhe uma imagem. O scanner pode corrigir bordas, gerar PDF, reconhecer texto e detectar QR Code usando componentes do Android, Google Play Services e Google ML Kit. O conteúdo das imagens, o texto reconhecido e os resultados do processamento permanecem no aparelho e não são enviados pelo ML Kit aos servidores do Google.</p>
     <p>O BordoAi não autentica documentos. O usuário deve revisar os dados extraídos antes de salvá-los e confirmar validade, exigências e autenticidade nas fontes oficiais competentes.</p>
 
     <h2>4. Armazenamento, PIN e segurança</h2>
@@ -87,17 +87,21 @@
     <h2>8. Publicidade, analytics e perfilamento</h2>
     <p>Esta versão do BordoAi não exibe anúncios, não utiliza os dados inseridos para publicidade personalizada e não cria perfis comerciais dos usuários. A versão atual também não utiliza serviço próprio da TerminaisLMC para rastrear o conteúdo dos certificados, notas ou rotinas cadastradas.</p>
 
-    <h2>9. Retenção e exclusão</h2>
+    <h2>9. Métricas técnicas do Google ML Kit</h2>
+    <p>Os SDKs do Google ML Kit podem transmitir ao Google informações técnicas de diagnóstico e análise de uso, como fabricante e modelo do aparelho, versão do sistema, versão do aplicativo, identificadores de instalação, métricas de desempenho, configuração da API, tamanho das entradas e saídas, eventos de inicialização ou processamento e códigos de erro.</p>
+    <p>Segundo a documentação do Google, essas métricas são protegidas em trânsito por HTTPS e não são transferidas pelo ML Kit a terceiros. Elas não incluem as imagens dos certificados, o texto reconhecido ou os resultados do OCR e QR Code.</p>
+
+    <h2>10. Retenção e exclusão</h2>
     <p>Os dados locais permanecem no aparelho enquanto o usuário os mantiver ou enquanto o aplicativo continuar instalado. O usuário pode excluir registros e documentos dentro do BordoAi, limpar os dados do aplicativo nas configurações do Android ou desinstalar o aplicativo.</p>
     <p>A desinstalação remove a cópia interna, mas não apaga arquivos que o usuário tenha exportado, compartilhado ou salvo em pasta externa. Essas cópias devem ser excluídas diretamente no destino escolhido.</p>
 
-    <h2>10. Crianças e adolescentes</h2>
+    <h2>11. Crianças e adolescentes</h2>
     <p>O BordoAi é destinado a profissionais marítimos adultos e não foi desenvolvido ou direcionado a crianças.</p>
 
-    <h2>11. Serviços de terceiros</h2>
+    <h2>12. Serviços de terceiros</h2>
     <p>O aplicativo utiliza componentes da plataforma Android e do Google Play para distribuição, notificações locais, seleção de arquivos e digitalização de documentos. Esses provedores podem processar dados técnicos necessários ao funcionamento de seus próprios serviços, conforme as respectivas políticas.</p>
 
-    <h2>12. Alterações futuras</h2>
+    <h2>13. Alterações futuras</h2>
     <p>Se forem adicionadas contas online, sincronização própria em nuvem, serviços empresariais, analytics, publicidade ou outras formas de coleta externa, esta política e as declarações da Google Play serão atualizadas antes da disponibilização desses recursos.</p>
 
     <div class="notice">
@@ -105,7 +109,7 @@
     </div>
 
     <footer>
-      <h2>13. Contato</h2>
+      <h2>14. Contato</h2>
       <p><strong>Responsável:</strong> TerminaisLMC</p>
       <p><strong>Aplicativo:</strong> BordoAi</p>
       <p><strong>E-mail:</strong> <a href="mailto:alphaterminallmc@hotmail.com">alphaterminallmc@hotmail.com</a></p>
