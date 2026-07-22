@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/bordoai/servicos-da-marinha",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/servicos-da-marinha",
+      "destination": "/index.html"
+    }
+  ]
+}
