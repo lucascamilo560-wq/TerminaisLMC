@@ -31,6 +31,14 @@
     {
       "source": "/servicos-da-marinha",
       "destination": "/index.html"
+    },
+    {
+      "source": "/bordoai/politica-de-privacidade",
+      "destination": "/bordoai-politica-de-privacidade.html"
+    },
+    {
+      "source": "/bordoai/excluir-conta",
+      "destination": "/bordoai-excluir-conta.html"
     }
   ]
 }

@@ -3,28 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Política de Privacidade do aplicativo BordoAi, da TerminaisLMC." />
+  <meta name="description" content="Política de Privacidade do BordoAi, incluindo funcionamento local-first, conta opcional, Google Play e backup em nuvem." />
+  <meta name="robots" content="index,follow" />
   <title>Política de Privacidade do BordoAi — TerminaisLMC</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; }
     html { color-scheme: dark; }
-    body {
-      margin: 0;
-      padding: 40px 20px;
-      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: #e8f4f8;
-      background: linear-gradient(180deg, #031827 0%, #061f32 45%, #04131f 100%);
-      line-height: 1.7;
-    }
-    main {
-      width: min(780px, 100%);
-      margin: 0 auto;
-      padding: clamp(24px, 5vw, 48px);
-      background: rgba(7, 35, 54, 0.88);
-      border: 1px solid rgba(64, 215, 239, 0.22);
-      border-radius: 24px;
-      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
-    }
+    body { margin: 0; padding: 40px 20px; font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #e8f4f8; background: linear-gradient(180deg, #031827 0%, #061f32 45%, #04131f 100%); line-height: 1.7; }
+    main { width: min(820px, 100%); margin: 0 auto; padding: clamp(24px, 5vw, 48px); background: rgba(7, 35, 54, 0.9); border: 1px solid rgba(64, 215, 239, 0.22); border-radius: 24px; box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28); }
     .brand { color: #44ddf5; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
     h1 { margin: 12px 0 4px; font-size: clamp(2rem, 6vw, 3rem); line-height: 1.15; }
     .updated { margin-top: 0; color: #9bb2c0; }
@@ -33,13 +19,7 @@
     ul { padding-left: 22px; }
     strong { color: #f4fbfd; }
     a { color: #55e1ef; }
-    .notice {
-      margin-top: 28px;
-      padding: 18px;
-      border-left: 4px solid #55e1ef;
-      border-radius: 10px;
-      background: rgba(85, 225, 239, 0.07);
-    }
+    .notice { margin-top: 28px; padding: 18px; border-left: 4px solid #55e1ef; border-radius: 10px; background: rgba(85, 225, 239, 0.07); }
     footer { margin-top: 38px; padding-top: 22px; border-top: 1px solid rgba(85, 225, 239, .16); }
   </style>
 </head>
@@ -47,69 +27,71 @@
   <main>
     <div class="brand">BordoAi · TerminaisLMC</div>
     <h1>Política de Privacidade</h1>
-    <p class="updated">Última atualização: 17 de julho de 2026</p>
+    <p class="updated">Última atualização: 23 de julho de 2026</p>
 
-    <p>Esta Política de Privacidade explica como o aplicativo <strong>BordoAi</strong>, de propriedade da <strong>TerminaisLMC</strong>, acessa, processa, armazena e permite que o usuário controle seus dados. Para dúvidas sobre privacidade, entre em contato pelo e-mail <a href="mailto:alphaterminallmc@hotmail.com">alphaterminallmc@hotmail.com</a>.</p>
+    <p>Esta Política de Privacidade explica como o aplicativo <strong>BordoAi</strong>, de propriedade da <strong>TerminaisLMC</strong>, acessa, processa, armazena e permite que o usuário controle seus dados. Para dúvidas, utilize <a href="mailto:alphaterminallmc@hotmail.com">alphaterminallmc@hotmail.com</a>.</p>
 
-    <h2>1. Funcionamento local e ausência de conta online</h2>
-    <p>O BordoAi funciona prioritariamente de forma local. Nesta versão, o aplicativo não exige cadastro, login ou criação de conta online e não mantém um banco de dados central da TerminaisLMC com as informações inseridas pelo usuário.</p>
+    <h2>1. Funcionamento local-first</h2>
+    <p>Perfil marítimo, embarcações, escalas, certificados, lembretes, notas, checklists, registros de ciclo e configurações são armazenados prioritariamente no aparelho. Esses dados não são enviados automaticamente para a TerminaisLMC. Compartilhamento, salvamento externo e backup em nuvem dependem de uma ação do usuário.</p>
 
-    <h2>2. Dados tratados no aparelho</h2>
-    <p>Conforme os recursos utilizados, o usuário pode inserir ou gerar no próprio aparelho:</p>
+    <h2>2. Conta online opcional</h2>
+    <p>O uso local gratuito não exige cadastro. Quando o usuário solicita assinatura, restauração de compra ou backup em nuvem, o BordoAi utiliza o Supabase para autenticação por e-mail e senha ou Google.</p>
+    <p>Podem ser tratados identificador da conta, e-mail, nome de exibição, foto fornecida pelo provedor, método de autenticação, estado do plano e informações técnicas do dispositivo. Senhas são processadas pelo serviço de autenticação e não são disponibilizadas à TerminaisLMC em formato legível.</p>
+
+    <h2>3. Dados tratados no aparelho</h2>
     <ul>
       <li>nome, função marítima, número de inscrição, foto de perfil e embarcação;</li>
-      <li>escalas, ciclos de embarque, viagens, pré-embarque, dobras e períodos de folga;</li>
-      <li>certificados, datas de emissão e validade, números de documento e regras aplicáveis;</li>
-      <li>notas, diário, lembretes, checklists, atividades e configurações;</li>
-      <li>fotos, imagens, PDFs, textos reconhecidos por OCR e conteúdo de QR Code de documentos escolhidos pelo usuário.</li>
+      <li>escalas, ciclos, viagens, pré-embarque, dobras e períodos de folga;</li>
+      <li>certificados, datas, números de documento e regras aplicáveis;</li>
+      <li>notas, lembretes, checklists, atividades e configurações;</li>
+      <li>fotos, PDFs, textos reconhecidos por OCR e conteúdo de QR Code escolhido pelo usuário.</li>
     </ul>
-    <p>Esses dados são utilizados para fornecer as funções de organização marítima escolhidas pelo usuário.</p>
 
-    <h2>3. Câmera, galeria, scanner, OCR e QR Code</h2>
-    <p>A câmera e a galeria são acessadas somente quando o usuário inicia uma digitalização ou escolhe uma imagem. O scanner pode corrigir bordas, gerar PDF, reconhecer texto e detectar QR Code usando componentes do Android, Google Play Services e Google ML Kit. O conteúdo das imagens, o texto reconhecido e os resultados do processamento permanecem no aparelho e não são enviados pelo ML Kit aos servidores do Google.</p>
-    <p>O BordoAi não autentica documentos. O usuário deve revisar os dados extraídos antes de salvá-los e confirmar validade, exigências e autenticidade nas fontes oficiais competentes.</p>
+    <h2>4. Câmera, galeria, scanner, OCR e QR Code</h2>
+    <p>A câmera e a galeria são acessadas somente quando o usuário inicia uma digitalização ou escolhe uma imagem. O scanner pode gerar PDF, reconhecer texto e detectar QR Code usando componentes do Android, Google Play Services e Google ML Kit.</p>
+    <p>O BordoAi não autentica documentos. O usuário deve revisar os dados extraídos e confirmar validade, exigências e autenticidade nas fontes oficiais competentes.</p>
 
-    <h2>4. Armazenamento, PIN e segurança</h2>
-    <p>Os registros e documentos ficam armazenados na área local do aplicativo. O usuário pode ativar um PIN para proteger o banco local. A segurança também depende do bloqueio do aparelho, da proteção da conta Google e do cuidado com arquivos exportados ou compartilhados.</p>
-    <p>Nenhum método de armazenamento é totalmente infalível, mas o BordoAi procura limitar o acesso aos dados necessários para suas funções.</p>
-
-    <h2>5. Backup em pasta escolhida pelo usuário</h2>
-    <p>O BordoAi pode acessar uma pasta selecionada expressamente pelo usuário por meio do seletor de arquivos do Android. Essa pasta pode estar no armazenamento do aparelho ou em um provedor compatível, como Google Drive.</p>
-    <p>A TerminaisLMC não recebe automaticamente os arquivos salvos nessa pasta. O tratamento realizado pelo provedor de armazenamento escolhido segue os termos e a política de privacidade desse serviço.</p>
-
-    <h2>6. Notificações</h2>
-    <p>As notificações de certificados, viagens, pré-embarque, embarque, desembarque, escalas, notas, checklists e lembretes são programadas localmente no aparelho com base nas informações cadastradas pelo usuário.</p>
-
-    <h2>7. Compartilhamento de dados</h2>
-    <p>O BordoAi não vende dados pessoais e não compartilha automaticamente certificados, documentos ou registros com a TerminaisLMC, anunciantes ou outras empresas.</p>
-    <p>O compartilhamento ocorre somente por iniciativa do usuário, por exemplo ao utilizar as funções de compartilhar um PDF, salvar em uma pasta externa ou escolher outro aplicativo ou provedor como destino.</p>
-
-    <h2>8. Publicidade, analytics e perfilamento</h2>
-    <p>Esta versão do BordoAi não exibe anúncios, não utiliza os dados inseridos para publicidade personalizada e não cria perfis comerciais dos usuários. A versão atual também não utiliza serviço próprio da TerminaisLMC para rastrear o conteúdo dos certificados, notas ou rotinas cadastradas.</p>
-
-    <h2>9. Métricas técnicas do Google ML Kit</h2>
+    <h2>5. Métricas técnicas do Google ML Kit</h2>
     <p>Os SDKs do Google ML Kit podem transmitir ao Google informações técnicas de diagnóstico e análise de uso, como fabricante e modelo do aparelho, versão do sistema, versão do aplicativo, identificadores de instalação, métricas de desempenho, configuração da API, tamanho das entradas e saídas, eventos de inicialização ou processamento e códigos de erro.</p>
-    <p>Segundo a documentação do Google, essas métricas são protegidas em trânsito por HTTPS e não são transferidas pelo ML Kit a terceiros. Elas não incluem as imagens dos certificados, o texto reconhecido ou os resultados do OCR e QR Code.</p>
+    <p>Essas métricas não incluem as imagens dos certificados, o texto reconhecido ou os resultados do OCR e QR Code.</p>
 
-    <h2>10. Retenção e exclusão</h2>
-    <p>Os dados locais permanecem no aparelho enquanto o usuário os mantiver ou enquanto o aplicativo continuar instalado. O usuário pode excluir registros e documentos dentro do BordoAi, limpar os dados do aplicativo nas configurações do Android ou desinstalar o aplicativo.</p>
-    <p>A desinstalação remove a cópia interna, mas não apaga arquivos que o usuário tenha exportado, compartilhado ou salvo em pasta externa. Essas cópias devem ser excluídas diretamente no destino escolhido.</p>
+    <h2>6. Armazenamento local, PIN e segurança</h2>
+    <p>Os registros e documentos ficam na área local do aplicativo. O usuário pode ativar um PIN para proteger o banco local. A segurança também depende do bloqueio do aparelho, da proteção das contas utilizadas e do cuidado com arquivos exportados ou compartilhados.</p>
 
-    <h2>11. Crianças e adolescentes</h2>
-    <p>O BordoAi é destinado a profissionais marítimos adultos e não foi desenvolvido ou direcionado a crianças.</p>
+    <h2>7. Pasta escolhida pelo usuário</h2>
+    <p>O BordoAi pode acessar uma pasta selecionada expressamente pelo usuário pelo seletor de arquivos do Android. Essa pasta pode estar no aparelho ou em um provedor compatível, como Google Drive. A TerminaisLMC não recebe automaticamente os arquivos salvos nesse destino.</p>
+
+    <h2>8. Backup privado em nuvem</h2>
+    <p>Quando disponível no BordoAi Pro, o backup em nuvem ocorre somente após solicitação do usuário autenticado. O arquivo é armazenado em área privada vinculada à conta, junto com metadados como data, tamanho, versão do aplicativo e código de verificação de integridade.</p>
+    <p>São mantidas até dez versões recentes por conta. Versões mais antigas podem ser removidas automaticamente após a criação de um novo backup.</p>
+
+    <h2>9. Assinaturas e Google Play</h2>
+    <p>Pagamentos são processados pela Google Play. O BordoAi não recebe os dados completos do cartão. Para validar, restaurar e atualizar o plano, podem ser tratados identificador do produto, token de compra, estado da assinatura, renovação, vencimento e identificador ofuscado da conta.</p>
+
+    <h2>10. Notificações</h2>
+    <p>Notificações de certificados, viagens, pré-embarque, embarque, desembarque, notas, checklists e lembretes são programadas localmente conforme as informações cadastradas.</p>
+
+    <h2>11. Compartilhamento, publicidade e perfilamento</h2>
+    <p>O BordoAi não vende dados pessoais e não compartilha automaticamente certificados ou registros com anunciantes. O compartilhamento ocorre somente por iniciativa do usuário.</p>
+    <p>O aplicativo não utiliza os dados inseridos para publicidade personalizada nem cria perfis comerciais dos usuários.</p>
 
     <h2>12. Serviços de terceiros</h2>
-    <p>O aplicativo utiliza componentes da plataforma Android e do Google Play para distribuição, notificações locais, seleção de arquivos e digitalização de documentos. Esses provedores podem processar dados técnicos necessários ao funcionamento de seus próprios serviços, conforme as respectivas políticas.</p>
+    <p>Recursos do BordoAi podem utilizar Supabase, Google Play, Google OAuth, Android, Google ML Kit e o provedor de armazenamento escolhido pelo usuário. Cada serviço possui suas próprias políticas e condições.</p>
 
-    <h2>13. Alterações futuras</h2>
-    <p>Se forem adicionadas contas online, sincronização própria em nuvem, serviços empresariais, analytics, publicidade ou outras formas de coleta externa, esta política e as declarações da Google Play serão atualizadas antes da disponibilização desses recursos.</p>
+    <h2>13. Retenção e exclusão</h2>
+    <p>O usuário pode excluir registros locais, limpar os dados do aplicativo e, quando autenticado, solicitar a exclusão da conta online e dos backups em nuvem. A exclusão da conta online não apaga dados locais nem arquivos já salvos em pastas externas.</p>
+    <p>Uma assinatura com renovação ativa deve ser cancelada na Google Play antes da exclusão da conta online. Consulte <a href="/bordoai/excluir-conta">Excluir conta do BordoAi</a>.</p>
 
-    <div class="notice">
-      <strong>Aviso:</strong> o BordoAi é uma ferramenta independente de organização pessoal e profissional. Não representa a Autoridade Marítima, órgãos governamentais, empresas de navegação ou instituições certificadoras.
-    </div>
+    <h2>14. Crianças e adolescentes</h2>
+    <p>O BordoAi é destinado a profissionais marítimos adultos e não foi desenvolvido ou direcionado a crianças.</p>
+
+    <h2>15. Alterações</h2>
+    <p>Esta política poderá ser atualizada quando recursos, fornecedores ou obrigações aplicáveis mudarem. A data da versão vigente será indicada nesta página.</p>
+
+    <div class="notice"><strong>Aviso:</strong> o BordoAi é uma ferramenta independente de organização pessoal e profissional. Não representa a Autoridade Marítima, órgãos governamentais, empresas de navegação ou instituições certificadoras.</div>
 
     <footer>
-      <h2>14. Contato</h2>
+      <h2>16. Contato</h2>
       <p><strong>Responsável:</strong> TerminaisLMC</p>
       <p><strong>Aplicativo:</strong> BordoAi</p>
       <p><strong>E-mail:</strong> <a href="mailto:alphaterminallmc@hotmail.com">alphaterminallmc@hotmail.com</a></p>
