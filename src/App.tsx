@@ -3,6 +3,7 @@ import { SiteLayout } from './SiteLayout'
 
 const ALPHA_PRO_URL = 'https://play.google.com/store/apps/details?id=com.lmc.alphaproterminal'
 const CONTROLE_AI_URL = 'https://play.google.com/store/apps/details?id=com.divideai.app'
+const BORDO_AI_WEB_URL = 'https://bordoai.vercel.app'
 const SUPPORT_EMAIL = 'alphaterminallmc@hotmail.com'
 
 type IconName = 'arrow' | 'chart' | 'wallet' | 'anchor' | 'shield' | 'phone' | 'layers' | 'users' | 'file' | 'check' | 'mail'
@@ -43,7 +44,7 @@ const products: Product[] = [
     description: 'Escala, certificados, rotina a bordo, tempo de embarque, diário, contatos e backup local.',
     accent: 'teal',
     icon: 'anchor',
-    status: 'Em testes internos',
+    status: 'Web/PWA disponível',
   },
 ]
 
@@ -319,14 +320,112 @@ function BordoAiPage() {
             <h1>Organização profissional para quem trabalha embarcado.</h1>
             <p>Um aplicativo local-first para administrar escala, certificados, rotina, tempo de embarque, diário e informações profissionais sem depender de conexão permanente.</p>
             <div className="button-row">
-              <a href="/bordoai/servicos-da-marinha" className="button button--light">Abrir área marítima <Icon name="arrow" size={18} /></a>
-              <a href="#recursos" className="button button--ghost-light">Ver recursos</a>
+              <a href={BORDO_AI_WEB_URL} target="_blank" rel="noopener noreferrer" className="button button--light">
+                Abrir BordoAi na Web <Icon name="arrow" size={18} />
+              </a>
+              <a href="#instalar" className="button button--ghost-light">Instalar no celular</a>
             </div>
           </div>
           <div className="product-hero-summary">
             <span className="product-hero-summary-icon"><Icon name="anchor" size={36} /></span>
-            <strong>Em testes internos</strong>
-            <p>O BordoAi está sendo validado antes da distribuição mais ampla, com foco em precisão, funcionamento offline e segurança dos dados locais.</p>
+            <strong>Web/PWA disponível</strong>
+            <p>A versão Web já pode ser usada em iPhone e Android. O aplicativo Android nativo continua em testes antes da distribuição mais ampla.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section--soft" id="instalar">
+        <div className="content-width">
+          <div className="section-heading">
+            <span className="eyebrow">USE COMO APP NO CELULAR</span>
+            <h2>Abra uma vez no navegador e deixe o BordoAi na Tela de Início.</h2>
+            <p>No iPhone, a instalação é feita pelo Safari. No Android, use o Chrome. Depois disso, o BordoAi abre pelo próprio ícone como um aplicativo.</p>
+          </div>
+
+          <div className="bordoai-install-grid">
+            <article className="bordoai-install-card">
+              <span className="install-platform">iPhone · Safari</span>
+              <h3>Como instalar o BordoAi no iPhone</h3>
+              <ol className="install-steps">
+                <li>
+                  <span>1</span>
+                  <div>
+                    <strong>Abra no Safari</strong>
+                    <p>Toque em “Abrir BordoAi na Web” abaixo. Se outro navegador abrir, copie o endereço e abra pelo Safari.</p>
+                  </div>
+                </li>
+                <li>
+                  <span>2</span>
+                  <div>
+                    <strong>Toque em Compartilhar</strong>
+                    <p>No Safari, toque no botão Compartilhar — o quadrado com uma seta apontando para cima.</p>
+                  </div>
+                </li>
+                <li>
+                  <span>3</span>
+                  <div>
+                    <strong>Escolha “Adicionar à Tela de Início”</strong>
+                    <p>Role as opções do menu, se necessário, e toque em “Adicionar à Tela de Início”.</p>
+                  </div>
+                </li>
+                <li>
+                  <span>4</span>
+                  <div>
+                    <strong>Confirme em “Adicionar”</strong>
+                    <p>O ícone do BordoAi aparecerá na Tela de Início. Da próxima vez, abra o aplicativo por esse ícone.</p>
+                  </div>
+                </li>
+              </ol>
+              <a href={BORDO_AI_WEB_URL} target="_blank" rel="noopener noreferrer" className="button button--primary">
+                Abrir BordoAi na Web <Icon name="arrow" size={18} />
+              </a>
+            </article>
+
+            <article className="bordoai-install-card">
+              <span className="install-platform">Android · Chrome</span>
+              <h3>Como instalar pelo Android</h3>
+              <ol className="install-steps">
+                <li>
+                  <span>1</span>
+                  <div>
+                    <strong>Abra no Chrome</strong>
+                    <p>Entre na versão Web do BordoAi usando o Google Chrome.</p>
+                  </div>
+                </li>
+                <li>
+                  <span>2</span>
+                  <div>
+                    <strong>Abra o menu do navegador</strong>
+                    <p>Toque nos três pontos no canto superior do Chrome.</p>
+                  </div>
+                </li>
+                <li>
+                  <span>3</span>
+                  <div>
+                    <strong>Escolha instalar</strong>
+                    <p>Toque em “Instalar app” ou “Adicionar à tela inicial”. O nome da opção pode variar conforme a versão do Android.</p>
+                  </div>
+                </li>
+                <li>
+                  <span>4</span>
+                  <div>
+                    <strong>Confirme</strong>
+                    <p>Depois da confirmação, use o ícone do BordoAi criado na tela do celular.</p>
+                  </div>
+                </li>
+              </ol>
+              <a href={BORDO_AI_WEB_URL} target="_blank" rel="noopener noreferrer" className="button button--primary">
+                Abrir versão Web <Icon name="arrow" size={18} />
+              </a>
+            </article>
+          </div>
+
+          <div className="bordoai-pro-notice">
+            <span className="bordoai-pro-notice-icon"><Icon name="shield" size={26} /></span>
+            <div>
+              <strong>BordoAi Pro estará disponível em breve.</strong>
+              <p>O plano Pro ainda não está disponível para contratação na versão Web. Quando for liberado, as opções de assinatura serão apresentadas no próprio BordoAi.</p>
+            </div>
           </div>
         </div>
       </section>
