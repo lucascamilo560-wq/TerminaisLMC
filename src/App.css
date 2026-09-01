@@ -820,6 +820,124 @@ h3 {
   font-size: 0.95rem;
 }
 
+.bordoai-install-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.bordoai-install-card {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+}
+
+.install-platform {
+  align-self: flex-start;
+  margin-bottom: 14px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: var(--teal);
+  background: rgba(19, 127, 120, 0.09);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.bordoai-install-card h3 {
+  margin-bottom: 24px;
+  font-size: 1.42rem;
+}
+
+.install-steps {
+  display: grid;
+  gap: 18px;
+  margin: 0 0 28px;
+  padding: 0;
+  list-style: none;
+}
+
+.install-steps li {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 13px;
+  align-items: start;
+}
+
+.install-steps li > span {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--teal);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.install-steps li > div {
+  min-width: 0;
+}
+
+.install-steps strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--ink);
+  font-size: 0.94rem;
+}
+
+.install-steps p {
+  margin-bottom: 0;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.bordoai-install-card .button {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.bordoai-pro-notice {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  align-items: center;
+  margin-top: 24px;
+  padding: 22px 24px;
+  border: 1px solid rgba(19, 127, 120, 0.22);
+  border-radius: var(--radius-md);
+  background: rgba(19, 127, 120, 0.07);
+}
+
+.bordoai-pro-notice-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 13px;
+  color: #fff;
+  background: var(--teal);
+}
+
+.bordoai-pro-notice strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--ink);
+  font-size: 1rem;
+}
+
+.bordoai-pro-notice p {
+  margin-bottom: 0;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
 .check-list {
   display: grid;
   gap: 13px;
@@ -1075,6 +1193,10 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .bordoai-install-grid {
+    grid-template-columns: 1fr;
+  }
+
   .maritime-callout-inner {
     grid-template-columns: auto 1fr;
   }
@@ -1162,6 +1284,18 @@ h3 {
 
   .product-hero-summary {
     padding: 24px;
+  }
+
+  .bordoai-install-card {
+    padding: 24px;
+  }
+
+  .bordoai-install-card .button {
+    width: 100%;
+  }
+
+  .bordoai-pro-notice {
+    grid-template-columns: 1fr;
   }
 
   .contact-card {
