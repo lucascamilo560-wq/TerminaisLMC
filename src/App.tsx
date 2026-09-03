@@ -423,8 +423,8 @@ function BordoAiPage() {
           <div className="bordoai-pro-notice">
             <span className="bordoai-pro-notice-icon"><Icon name="shield" size={26} /></span>
             <div>
-              <strong>BordoAi Pro estará disponível em breve.</strong>
-              <p>O plano Pro ainda não está disponível para contratação na versão Web. Quando for liberado, as opções de assinatura serão apresentadas no próprio BordoAi.</p>
+              <strong>BordoAi Pro já está disponível na Web.</strong>
+              <p>Assine pelo próprio BordoAi: plano mensal por R$ 9,90 ou anual por R$ 79,90, com pagamento seguro pelo Mercado Pago.</p>
             </div>
           </div>
         </div>
