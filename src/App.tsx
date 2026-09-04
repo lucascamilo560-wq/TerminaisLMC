@@ -3,6 +3,7 @@ import { SiteLayout } from './SiteLayout'
 
 const ALPHA_PRO_URL = 'https://play.google.com/store/apps/details?id=com.lmc.alphaproterminal'
 const CONTROLE_AI_URL = 'https://play.google.com/store/apps/details?id=com.divideai.app'
+const BORDO_AI_PLAY_URL = 'https://play.google.com/store/apps/details?id=com.lmc.bordoai'
 const BORDO_AI_WEB_URL = 'https://bordoai.vercel.app'
 const SUPPORT_EMAIL = 'alphaterminallmc@hotmail.com'
 
@@ -44,7 +45,7 @@ const products: Product[] = [
     description: 'Escala, certificados, rotina a bordo, tempo de embarque, diário, contatos e backup local.',
     accent: 'teal',
     icon: 'anchor',
-    status: 'Web/PWA disponível',
+    status: 'Google Play e Web/PWA',
   },
 ]
 
@@ -320,16 +321,18 @@ function BordoAiPage() {
             <h1>Organização profissional para quem trabalha embarcado.</h1>
             <p>Um aplicativo local-first para administrar escala, certificados, rotina, tempo de embarque, diário e informações profissionais sem depender de conexão permanente.</p>
             <div className="button-row">
-              <a href={BORDO_AI_WEB_URL} target="_blank" rel="noopener noreferrer" className="button button--light">
+              <a href={BORDO_AI_PLAY_URL} target="_blank" rel="noopener noreferrer" className="button button--light">
+                Baixar na Google Play <Icon name="arrow" size={18} />
+              </a>
+              <a href={BORDO_AI_WEB_URL} target="_blank" rel="noopener noreferrer" className="button button--ghost-light">
                 Abrir BordoAi na Web <Icon name="arrow" size={18} />
               </a>
-              <a href="#instalar" className="button button--ghost-light">Instalar no celular</a>
             </div>
           </div>
           <div className="product-hero-summary">
             <span className="product-hero-summary-icon"><Icon name="anchor" size={36} /></span>
-            <strong>Web/PWA disponível</strong>
-            <p>A versão Web já pode ser usada em iPhone e Android. O aplicativo Android nativo continua em testes antes da distribuição mais ampla.</p>
+            <strong>Disponível na Google Play e Web/PWA</strong>
+            <p>No Android, baixe o BordoAi pela Google Play. A versão Web/PWA continua disponível para iPhone, Android e navegadores compatíveis.</p>
           </div>
         </div>
       </section>
@@ -337,9 +340,9 @@ function BordoAiPage() {
       <section className="section section--soft" id="instalar">
         <div className="content-width">
           <div className="section-heading">
-            <span className="eyebrow">USE COMO APP NO CELULAR</span>
-            <h2>Abra uma vez no navegador e deixe o BordoAi na Tela de Início.</h2>
-            <p>No iPhone, a instalação é feita pelo Safari. No Android, use o Chrome. Depois disso, o BordoAi abre pelo próprio ícone como um aplicativo.</p>
+            <span className="eyebrow">WEB/PWA NO CELULAR</span>
+            <h2>Prefere a versão Web? Instale o BordoAi na Tela de Início.</h2>
+            <p>No iPhone, a instalação é feita pelo Safari. No Android, além do app disponível na Google Play, você também pode usar a versão Web/PWA pelo Chrome.</p>
           </div>
 
           <div className="bordoai-install-grid">
@@ -383,7 +386,7 @@ function BordoAiPage() {
 
             <article className="bordoai-install-card">
               <span className="install-platform">Android · Chrome</span>
-              <h3>Como instalar pelo Android</h3>
+              <h3>Como instalar a versão Web/PWA no Android</h3>
               <ol className="install-steps">
                 <li>
                   <span>1</span>
@@ -423,8 +426,8 @@ function BordoAiPage() {
           <div className="bordoai-pro-notice">
             <span className="bordoai-pro-notice-icon"><Icon name="shield" size={26} /></span>
             <div>
-              <strong>BordoAi Pro já está disponível na Web.</strong>
-              <p>Assine pelo próprio BordoAi: plano mensal por R$ 9,90 ou anual por R$ 79,90, com pagamento seguro pelo Mercado Pago.</p>
+              <strong>BordoAi Pro já está disponível na Web e no Android.</strong>
+              <p>Na Web, assine pelo próprio BordoAi com pagamento pelo Mercado Pago. No aplicativo Android, a assinatura é processada pela Google Play.</p>
             </div>
           </div>
         </div>
