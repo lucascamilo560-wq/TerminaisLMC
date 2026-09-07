@@ -46,6 +46,10 @@
     {
       "source": "/bordoai/excluir-conta",
       "destination": "/bordoai-excluir-conta.html"
+    },
+    {
+      "source": "/bordoai/iphone",
+      "destination": "/bordoai-iphone.html"
     }
   ]
 }
