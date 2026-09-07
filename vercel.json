@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "/bordoai/android",
+      "destination": "https://play.google.com/store/apps/details?id=com.lmc.bordoai",
+      "permanent": false
+    }
+  ],
   "rewrites": [
     {
       "source": "/aplicativos",
