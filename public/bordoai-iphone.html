@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#041827" />
+  <meta name="description" content="Abra o BordoAi no iPhone e instale como app pela Tela de Início." />
+  <meta name="robots" content="index,follow" />
+  <link rel="icon" href="/favicon.png" />
+  <title>BordoAi no iPhone</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    :root { color-scheme: dark; --bg:#03131f; --card:#08243a; --card2:#0a2d48; --cyan:#35d9f3; --text:#f5fbff; --muted:#a9c0cf; --line:rgba(53,217,243,.22); }
+    body { margin:0; min-height:100vh; font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:radial-gradient(circle at 50% 0%,#0b3b5d 0,#061f31 35%,#03131f 72%); color:var(--text); }
+    .shell { width:min(760px,100%); margin:0 auto; padding:calc(28px + env(safe-area-inset-top)) 18px calc(32px + env(safe-area-inset-bottom)); }
+    .brand { display:flex; align-items:center; gap:12px; margin-bottom:24px; }
+    .brand img { width:54px; height:54px; border-radius:15px; box-shadow:0 0 26px rgba(53,217,243,.18); }
+    .brand strong { font-size:1.35rem; letter-spacing:-.02em; }
+    .brand span { display:block; color:var(--muted); font-size:.9rem; margin-top:2px; }
+    .hero { padding:28px; border:1px solid var(--line); border-radius:28px; background:linear-gradient(180deg,rgba(10,45,72,.96),rgba(5,29,47,.96)); box-shadow:0 24px 70px rgba(0,0,0,.25); }
+    .eyebrow { display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; color:var(--cyan); background:rgba(53,217,243,.08); border:1px solid rgba(53,217,243,.16); font-weight:700; font-size:.82rem; }
+    h1 { margin:18px 0 10px; font-size:clamp(2.25rem,9vw,4.2rem); line-height:.98; letter-spacing:-.055em; }
+    h1 em { color:var(--cyan); font-style:normal; }
+    .lead { margin:0; color:#c9d8e1; font-size:1.08rem; line-height:1.58; }
+    .status { margin:22px 0 0; padding:14px 16px; border-radius:16px; background:rgba(53,217,243,.07); border:1px solid rgba(53,217,243,.16); color:#d8f8fd; line-height:1.45; }
+    .actions { display:grid; gap:12px; margin-top:22px; }
+    .button { display:flex; align-items:center; justify-content:center; gap:10px; width:100%; min-height:56px; border-radius:17px; border:1px solid transparent; font-size:1rem; font-weight:800; text-decoration:none; cursor:pointer; }
+    .primary { color:#01202d; background:linear-gradient(180deg,#58e7fb,#24cce8); box-shadow:0 12px 30px rgba(36,204,232,.18); }
+    .secondary { color:#eaf8fc; background:#0b2b43; border-color:rgba(255,255,255,.1); }
+    .steps { margin-top:20px; display:grid; gap:12px; }
+    .step { display:grid; grid-template-columns:42px 1fr; gap:13px; padding:17px; border-radius:18px; background:rgba(3,20,32,.48); border:1px solid rgba(255,255,255,.07); }
+    .num { width:42px; height:42px; display:grid; place-items:center; border-radius:13px; color:#052332; background:var(--cyan); font-weight:900; }
+    .step strong { display:block; margin-bottom:3px; }
+    .step p { margin:0; color:var(--muted); line-height:1.45; }
+    .tip { margin-top:18px; padding:16px 18px; border-left:4px solid var(--cyan); border-radius:12px; background:rgba(53,217,243,.065); color:#cfe3ed; line-height:1.5; }
+    .copy-msg { min-height:22px; margin-top:8px; text-align:center; color:var(--cyan); font-size:.9rem; }
+    footer { margin-top:24px; text-align:center; color:#7f9aaa; font-size:.86rem; }
+    footer strong { color:#cdeefa; }
+    @media (max-width:520px) { .hero { padding:23px 18px; border-radius:24px; } .brand { padding:0 4px; } }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <div class="brand">
+      <img src="/favicon.png" alt="BordoAi" />
+      <div><strong>BordoAi</strong><span>Feito para quem vive o mar.</span></div>
+    </div>
+
+    <section class="hero">
+      <div class="eyebrow"> INSTALAÇÃO NO IPHONE</div>
+      <h1>Use o BordoAi como <em>app</em> no iPhone.</h1>
+      <p class="lead">O BordoAi funciona como aplicativo web. No iPhone, a instalação é feita pelo Safari e leva poucos segundos.</p>
+
+      <div id="status" class="status">Se você abriu este link pelo Instagram, primeiro abra esta página no Safari.</div>
+
+      <div class="actions">
+        <a class="button primary" href="https://bordoai.vercel.app" id="openApp">Abrir o BordoAi</a>
+        <button class="button secondary" type="button" id="copyLink">Copiar link do BordoAi</button>
+      </div>
+      <div class="copy-msg" id="copyMsg" aria-live="polite"></div>
+
+      <div class="steps">
+        <div class="step"><div class="num">1</div><div><strong>Abra no Safari</strong><p>Se estiver no navegador do Instagram, use o menu do navegador e escolha abrir no Safari.</p></div></div>
+        <div class="step"><div class="num">2</div><div><strong>Toque em Compartilhar</strong><p>No Safari, toque no ícone de compartilhamento da barra do navegador.</p></div></div>
+        <div class="step"><div class="num">3</div><div><strong>Adicionar à Tela de Início</strong><p>Escolha “Adicionar à Tela de Início” e confirme em “Adicionar”.</p></div></div>
+      </div>
+
+      <div class="tip"><strong>Dica:</strong> depois de instalado, o BordoAi abre pela Tela de Início como um app, sem você precisar procurar o site novamente.</div>
+    </section>
+
+    <footer><strong>BordoAi</strong> — Feito para quem vive o mar.</footer>
+  </main>
+
+  <script>
+    const appUrl = 'https://bordoai.vercel.app';
+    const ua = navigator.userAgent || '';
+    const isIOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    const isSafari = isIOS && /Safari/.test(ua) && !/CriOS|FxiOS|EdgiOS|Instagram|FBAN|FBAV/.test(ua);
+    const isStandalone = window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+    const status = document.getElementById('status');
+
+    if (isStandalone) {
+      status.textContent = 'O BordoAi já está aberto como app neste iPhone.';
+    } else if (isSafari) {
+      status.textContent = 'Você já está no Safari. Agora abra o BordoAi e use Compartilhar → Adicionar à Tela de Início.';
+    } else if (isIOS) {
+      status.textContent = 'Você está no iPhone. Abra esta página no Safari para instalar o BordoAi na Tela de Início.';
+    } else {
+      status.textContent = 'Este guia é para iPhone. Você ainda pode abrir a versão web do BordoAi pelo botão abaixo.';
+    }
+
+    document.getElementById('copyLink').addEventListener('click', async () => {
+      const msg = document.getElementById('copyMsg');
+      try {
+        await navigator.clipboard.writeText(appUrl);
+        msg.textContent = 'Link copiado.';
+      } catch (_) {
+        const area = document.createElement('textarea');
+        area.value = appUrl;
+        document.body.appendChild(area);
+        area.select();
+        document.execCommand('copy');
+        area.remove();
+        msg.textContent = 'Link copiado.';
+      }
+      setTimeout(() => { msg.textContent = ''; }, 2200);
+    });
+  </script>
+</body>
+</html>
