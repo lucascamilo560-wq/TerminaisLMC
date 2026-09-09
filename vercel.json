@@ -40,6 +40,10 @@
       "destination": "/index.html"
     },
     {
+      "source": "/go/:path*",
+      "destination": "/index.html"
+    },
+    {
       "source": "/bordoai/politica-de-privacidade",
       "destination": "/bordoai-politica-de-privacidade.html"
     },
