@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Política de Privacidade do BordoAi, incluindo funcionamento local-first, conta opcional, Google Play, backup em nuvem e BordoAi Família." />
+  <meta name="description" content="Política de Privacidade do BordoAi: localização precisa e aproximada, GPS em segundo plano, Rotas, mapa social, documentos, backup automático, retenção e exclusão." />
   <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://terminais-lmc.vercel.app/bordoai-politica-de-privacidade.html" />
   <title>Política de Privacidade do BordoAi — TerminaisLMC</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; }
@@ -24,87 +25,108 @@
   </style>
 </head>
 <body>
-  <main>
+  <main data-policy-version="2026-10-24">
     <div class="brand">BordoAi · TerminaisLMC</div>
     <h1>Política de Privacidade</h1>
-    <p class="updated">Última atualização: 27 de julho de 2026</p>
+    <p class="updated">Última atualização: 24 de outubro de 2026</p>
 
     <p>Esta Política de Privacidade explica como o aplicativo <strong>BordoAi</strong>, de propriedade da <strong>TerminaisLMC</strong>, acessa, processa, armazena e permite que o usuário controle seus dados. Para dúvidas, utilize <a href="mailto:alphaterminallmc@hotmail.com">alphaterminallmc@hotmail.com</a>.</p>
 
-    <h2>1. Funcionamento local-first</h2>
-    <p>Perfil marítimo, embarcações, escalas, certificados, lembretes, notas, checklists, registros de ciclo e configurações são armazenados prioritariamente no aparelho. Esses dados não são enviados automaticamente para a TerminaisLMC. Compartilhamento, salvamento externo e backup em nuvem dependem de uma ação do usuário.</p>
+    <div class="notice"><strong>Localização:</strong> o BordoAi acessa e trata a localização precisa ou aproximada do dispositivo para mostrar sua posição no mapa, gravar viagens em Rotas e compartilhar a posição com familiares ou com a audiência escolhida no mapa social. No Android, uma viagem iniciada ou a atualização social em segundo plano ativada pelo usuário pode coletar localização <strong>mesmo quando o aplicativo está fechado ou não está em uso</strong>, conforme as permissões concedidas. Você pode pausar ou encerrar a viagem, desligar a presença social e revogar as permissões. As condições e os destinatários são descritos abaixo.</div>
 
-    <h2>2. Conta online opcional</h2>
-    <p>O uso local gratuito não exige cadastro. Quando o usuário solicita assinatura, restauração de compra, backup em nuvem ou acesso ao BordoAi Família, o BordoAi utiliza o Supabase para autenticação por e-mail e senha ou Google. O familiar pode criar uma conta gratuita e não precisa comprar uma assinatura.</p>
+    <h2 id="conta">1. Conta e funcionamento local-first</h2>
+    <p>Nas versões atuais, o primeiro acesso exige conta e conexão para estabelecer a identidade e separar os dados de cada usuário. Depois dessa configuração, os recursos locais compatíveis continuam disponíveis offline. A autenticação por e-mail e senha ou Google utiliza o Supabase. O familiar cria sua própria conta no modo Familiar e não precisa comprar a assinatura do marítimo.</p>
+    <p>Perfil marítimo, embarcações, escalas, certificados, lembretes, contatos cadastrados, notas, checklists, registros de ciclo e configurações ficam prioritariamente no aparelho. Recursos online enviam os dados necessários para autenticação, assinatura, backup privado automático dos planos elegíveis, vínculos familiares, viagens ou funções sociais utilizadas. Armazenamento local não significa que todos os recursos funcionem sem servidores.</p>
     <p>Podem ser tratados identificador da conta, e-mail, nome de exibição, foto fornecida pelo provedor, método de autenticação, estado do plano e informações técnicas do dispositivo. Senhas são processadas pelo serviço de autenticação e não são disponibilizadas à TerminaisLMC em formato legível.</p>
 
-    <h2>3. Dados tratados no aparelho</h2>
+    <h2 id="localizacao">2. Dados de localização e finalidades</h2>
+    <p>Com as permissões do sistema e conforme o recurso utilizado, o BordoAi pode obter latitude, longitude, margem de precisão e horário da leitura. Esses dados permitem mostrar a própria posição, escolher a partida de uma rota, registrar o trajeto, calcular distâncias, rumo de deslocamento, velocidade e estimativas de chegada. A localização pode vir do GPS e dos serviços de localização combinada do Android, que podem utilizar rede e sensores.</p>
+    <p>A localização precisa ou aproximada é um dado pessoal. A precisão depende da permissão Android, do ambiente e da qualidade da leitura; não há garantia de posição exata ou atual. O modo de compartilhamento Aproximado reduz o detalhe exibido aos destinatários. Uma posição antiga conserva seu horário e não confirma onde a pessoa está agora.</p>
+    <p>Não vendemos dados de localização nem os utilizamos para publicidade personalizada. As coordenadas não são enviadas para analytics pelo recurso de mapa. Permitir localização no Android, aceitar termos ou cadastrar uma embarcação no perfil não inicia, por si só, uma viagem ou a publicação da posição.</p>
+
+    <h2 id="segundo-plano">3. Localização em primeiro e segundo plano</h2>
+    <p>Em primeiro plano, os recursos de mapa podem acessar a localização autorizada para mostrar a posição e apoiar o planejamento. No Android, uma viagem iniciada pelo usuário pode continuar a gravação por um serviço nativo em primeiro plano com notificação, inclusive com a tela apagada ou o aplicativo minimizado. Quando aplicável, o acesso em segundo plano exige a permissão adicional do Android.</p>
+    <p>Separadamente, o usuário pode ativar a atualização social com o aplicativo fechado. Esse recurso tenta obter e enviar uma nova posição aproximadamente de hora em hora, mediante autorização social e permissão de localização em segundo plano. A escolha permanece salva até ser desativada. Não se trata de acompanhamento instantâneo garantido.</p>
+    <p>O usuário controla as duas funções separadamente: pode Pausar ou Encerrar viagem em Rotas, desligar Aparecer no mapa ou a atualização em segundo plano nas opções sociais e alterar ou revogar a permissão nas configurações do Android. Conceder a permissão não ativa essas funções automaticamente. O sistema, falta de sinal, bateria, rede, memória ou Forçar parada podem interromper ou atrasar atualizações.</p>
+
+    <h2 id="rotas">4. Rotas, fila offline e compartilhamento de viagens</h2>
+    <p>Ao iniciar uma gravação, os pontos GPS e seus horários são armazenados na área privada da conta no aparelho. No Android, a fila offline utiliza SQLite; com conexão e sessão válida, pontos e informações da viagem são sincronizados com o Supabase. Essa sincronização é separada do backup geral de cadastros e certificados.</p>
+    <p>A viagem pode ser privada ou acessível aos destinatários familiares escolhidos, conforme vínculos aceitos, plano e permissões da viagem. Compartilhar uma viagem não a publica no mapa social. O usuário escolhe precisão, acesso ao histórico e manutenção da última posição, quando essas opções estiverem disponíveis. Pausar ou Encerrar interrompe novas coletas dessa viagem, mas não apaga automaticamente os pontos já salvos ou o acesso anteriormente autorizado; o compartilhamento e a exclusão possuem controles próprios.</p>
+    <p>Planos usados na previsão automática de chegada podem ser guardados de forma privada no servidor. Destinatários recebem apenas as informações permitidas; planejar uma rota não transforma seus pontos em posições GPS medidas. O mapa e as previsões não são sistemas certificados de navegação, segurança ou emergência.</p>
+
+    <h2 id="mapa-social">5. Presença no mapa social</h2>
+    <p>Ativar o perfil social não publica localização automaticamente. Ao ligar Aparecer no mapa, o usuário autoriza o envio da sua posição ao Supabase para a audiência escolhida, como conexões aceitas ou outros usuários autorizados do mapa, conforme as opções disponíveis. Nome, foto e informações escolhidas do perfil podem aparecer junto da presença.</p>
+    <p>O mapa social mantém a última posição compartilhada e seu horário, não um histórico de trajetos. Quando o usuário autoriza manter a última posição, ela pode continuar visível enquanto essa escolha estiver ativa, inclusive sem nova coleta e com o aplicativo fechado. Desativar a presença, revogar a autorização ou bloquear um usuário impede novas consultas conforme os controles de acesso. Uma informação já vista, fotografada ou copiada por outra pessoa não pode ser recolhida remotamente.</p>
+
+    <h2 id="mapas-enderecos">6. Mapas, endereços e referências marítimas</h2>
+    <p>MapLibre é utilizado para exibir mapas, e provedores como OpenFreeMap recebem as requisições técnicas necessárias para carregar estilos e áreas do mapa, incluindo os dados de conexão normalmente envolvidos, como endereço IP. Não incluímos intencionalmente a identidade do perfil social nessas requisições; isso não representa anonimato absoluto.</p>
+    <p>Quando o usuário pesquisa um endereço ou solicita o cálculo de uma rota terrestre, o texto pesquisado e os pontos necessários podem ser enviados à HeiGIT/openrouteservice por meio do backend. Escolher uma partida manual não exige que ela corresponda à posição atual do aparelho. Referências AIS Stream e ANP são independentes da localização pessoal e não associam automaticamente o GPS do usuário à posição de uma embarcação.</p>
+
+    <h2 id="cadastros">7. Cadastros, câmera, documentos e OCR</h2>
     <ul>
       <li>nome, função marítima, número de inscrição, foto de perfil e embarcação;</li>
       <li>escalas, ciclos, viagens, pré-embarque, dobras e períodos de folga;</li>
-      <li>certificados, datas, números de documento e regras aplicáveis;</li>
-      <li>notas, lembretes, checklists, atividades e configurações;</li>
+      <li>certificados, datas, números de documento e informações profissionais ou de saúde ocupacional presentes nos documentos escolhidos;</li>
+      <li>contatos cadastrados, notas, lembretes, checklists, atividades e configurações;</li>
       <li>fotos, PDFs, textos reconhecidos por OCR e conteúdo de QR Code escolhido pelo usuário.</li>
     </ul>
-
-    <h2>4. Câmera, galeria, scanner, OCR e QR Code</h2>
     <p>A câmera e a galeria são acessadas somente quando o usuário inicia uma digitalização ou escolhe uma imagem. O scanner pode gerar PDF, reconhecer texto e detectar QR Code usando componentes do Android, Google Play Services e Google ML Kit.</p>
     <p>O BordoAi não autentica documentos. O usuário deve revisar os dados extraídos e confirmar validade, exigências e autenticidade nas fontes oficiais competentes.</p>
 
-    <h2>5. Métricas técnicas do Google ML Kit</h2>
+    <h2 id="diagnosticos">8. Métricas técnicas do Google ML Kit</h2>
     <p>Os SDKs do Google ML Kit podem transmitir ao Google informações técnicas de diagnóstico e análise de uso, como fabricante e modelo do aparelho, versão do sistema, versão do aplicativo, identificadores de instalação, métricas de desempenho, configuração da API, tamanho das entradas e saídas, eventos de inicialização ou processamento e códigos de erro.</p>
     <p>Essas métricas não incluem as imagens dos certificados, o texto reconhecido ou os resultados do OCR e QR Code.</p>
 
-    <h2>6. Armazenamento local, PIN e segurança</h2>
-    <p>Os registros e documentos ficam na área local do aplicativo. O usuário pode ativar um PIN para proteger o banco local. A segurança também depende do bloqueio do aparelho, da proteção das contas utilizadas e do cuidado com arquivos exportados ou compartilhados.</p>
-
-    <h2>7. Pasta escolhida pelo usuário</h2>
+    <h2 id="pasta">9. Pasta escolhida pelo usuário</h2>
     <p>O BordoAi pode acessar uma pasta selecionada expressamente pelo usuário pelo seletor de arquivos do Android. Essa pasta pode estar no aparelho ou em um provedor compatível, como Google Drive. A TerminaisLMC não recebe automaticamente os arquivos salvos nesse destino.</p>
 
-    <h2>8. Backup privado em nuvem</h2>
-    <p>Quando disponível no BordoAi Pro, o backup em nuvem ocorre somente após solicitação do usuário autenticado. O arquivo é armazenado em área privada vinculada à conta, junto com metadados como data, tamanho, versão do aplicativo e código de verificação de integridade.</p>
-    <p>São mantidas até dez versões recentes por conta. Versões mais antigas podem ser removidas automaticamente após a criação de um novo backup.</p>
+    <h2 id="backup">10. Backup privado automático</h2>
+    <p>Com Pro ou Pro Família ativo e o recurso disponível, alterações nos cadastros e arquivos de certificados são preparadas automaticamente para backup privado no Supabase, com internet e o app em uso ou reaberto. O usuário também pode solicitar uma cópia manual. Falhas ou mudanças offline ficam pendentes; não há garantia de upload com o aplicativo encerrado.</p>
+    <p>O backup inclui os dados operacionais da conta e arquivos dos certificados, com metadados como data, tamanho, versão do aplicativo e verificação de integridade. Não publica esses dados na Conexão Marítima nem concede ao familiar acesso ao backup completo. Pontos de Rotas possuem sincronização própria; cache AIS e mapas não fazem parte desse backup geral.</p>
+    <p>São mantidas até dez versões recentes do manifesto por conta. Versões mais antigas podem ser removidas após um novo backup. Arquivos de certificados são versionados por conteúdo para não sobrescrever cópias anteriores. Excluir um manifesto não elimina automaticamente todas as versões de seus anexos; arquivos sem referência podem precisar de limpeza administrativa. A proteção privada não equivale a criptografia de ponta a ponta.</p>
 
-    <h2>9. Assinaturas e Google Play</h2>
-    <p>Pagamentos são processados pela Google Play. O BordoAi não recebe os dados completos do cartão. Para validar, restaurar e atualizar o plano, podem ser tratados identificador do produto, token de compra, estado da assinatura, renovação, vencimento e identificador ofuscado da conta.</p>
-
-    <h2>10. BordoAi Família</h2>
-    <p>O recurso opcional BordoAi Família permite que um familiar autenticado solicite conexão com um marítimo autenticado que possua BordoAi Pro. Após autorização, o Supabase armazena somente os identificadores das contas conectadas, o vínculo e seu estado, uma semente mínima da escala e os compromissos compartilhados com seus status.</p>
+    <h2 id="familia">11. BordoAi Família e documentos escolhidos</h2>
+    <p>Os recursos familiares tratam no Supabase identificadores das contas, vínculos autorizados, perfis familiares privados, uma semente mínima da escala e compromissos compartilhados com seus status, conforme o recurso utilizado e o plano. Nome, foto e, quando informadas, função e embarcação podem ser apresentados aos vínculos aceitos e habilitados.</p>
     <p>A semente da escala contém a data-base de embarque, quantidade de dias embarcado, quantidade de dias de folga, ajustes necessários, versão e data de atualização. Os dias do calendário são calculados localmente no aparelho do familiar; a escala diária completa não é armazenada na nuvem.</p>
-    <p>O BordoAi Família não compartilha automaticamente certificados, documentos, CIR, passaporte, tempo de embarque, empresa, embarcação, contatos, notas privadas, lembretes pessoais ou backups completos. Compromissos pessoais só são compartilhados mediante ação expressa do usuário.</p>
-    <p>O vínculo pode ser recusado ou revogado. Se o BordoAi Pro do marítimo expirar, novas operações protegidas e novas sincronizações ficam indisponíveis, sem apagar automaticamente o vínculo ou os registros existentes. O familiar poderá visualizar apenas o último conteúdo já armazenado localmente, com aviso de que a sincronização está indisponível, até a renovação ou revogação.</p>
+    <p>Compartilhar documentos com a família é uma ação separada: o usuário escolhe os certificados ou o lote de arquivos e os destinatários. O serviço armazena cópias privadas dos arquivos selecionados e informações como nome, categoria e validade informada. Consulta e download verificam conta, plano, vínculo e autorização. Renovar um certificado no backup não substitui automaticamente a cópia já compartilhada. Revogar o acesso impede novos downloads, mas não apaga cópias que um destinatário já tenha salvo.</p>
+    <p>O vínculo pode ser recusado ou revogado. A perda do plano pode impedir novas operações protegidas sem apagar automaticamente os registros existentes. Documentos, localização, dados privados e backup completo não são liberados apenas por criar uma conta Familiar ou aceitar um vínculo.</p>
 
-    <h2>11. Notificações</h2>
+    <h2 id="rede">12. Conexão Marítima e mensagens</h2>
+    <p>A adesão social e as ações do usuário podem enviar perfil social, publicações, comentários, curtidas, conexões, solicitações, denúncias, bloqueios e mensagens para o Supabase. Dados operacionais privados e certificados não são publicados automaticamente. A visibilidade depende da função e da audiência aplicável.</p>
+    <p>Mensagens privadas são limitadas aos participantes autorizados de uma conexão aceita; bloqueio ou perda da conexão revoga o acesso conforme os controles do serviço. O conteúdo não possui criptografia de ponta a ponta nesta versão. Não utilize mensagens para enviar senhas ou segredos operacionais.</p>
+
+    <h2 id="notificacoes">13. Notificações</h2>
     <p>Notificações de certificados, viagens, pré-embarque, embarque, desembarque, notas, checklists e lembretes são programadas localmente conforme as informações cadastradas.</p>
-    <p>No BordoAi Família, novos compromissos podem gerar aviso dentro do aplicativo ou notificação local quando o app sincroniza. O recurso não promete recebimento remoto enquanto o aplicativo estiver completamente fechado.</p>
+    <p>Recursos compatíveis também podem registrar o dispositivo ou uma assinatura Web Push para avisos remotos, incluindo mensagens e viagens compartilhadas. Identificadores técnicos e tokens de entrega são utilizados pelo serviço de push; conteúdo privado e pontos GPS não precisam ser enviados a cada aviso. O Android, a conexão e as permissões podem bloquear ou atrasar a entrega.</p>
 
-    <h2>12. Compartilhamento, publicidade e perfilamento</h2>
-    <p>O BordoAi não vende dados pessoais e não compartilha automaticamente certificados ou registros com anunciantes. O compartilhamento ocorre somente por iniciativa do usuário.</p>
-    <p>O aplicativo não utiliza os dados inseridos para publicidade personalizada nem cria perfis comerciais dos usuários.</p>
+    <h2 id="pagamentos">14. Assinaturas e pagamentos</h2>
+    <p>Pagamentos no Android são processados pela Google Play; na Web, ofertas disponíveis podem utilizar Mercado Pago. O BordoAi não recebe os dados completos do cartão. Para criar, validar, restaurar e reconciliar o plano, podem ser tratados identificadores do produto ou oferta, token de compra ou identificador da assinatura, estado do pagamento, renovação, vencimento e identificadores técnicos vinculados à conta.</p>
 
-    <h2>13. Serviços de terceiros</h2>
-    <p>Recursos do BordoAi podem utilizar Supabase, Google Play, Google OAuth, Android, Google ML Kit e o provedor de armazenamento escolhido pelo usuário. Cada serviço possui suas próprias políticas e condições.</p>
+    <h2 id="seguranca">15. Segurança, terceiros e limites de compartilhamento</h2>
+    <p>Recursos online utilizam conexões HTTPS, autenticação e controles de acesso para separar dados privados e destinatários autorizados. O PIN local é uma proteção complementar, não uma garantia de proteção de todos os arquivos, filas ou dados do aparelho. A segurança depende também das contas utilizadas e do cuidado com arquivos exportados. Armazenamento privado não significa criptografia de ponta a ponta.</p>
+    <p>Os prestadores envolvidos podem incluir Supabase (autenticação, banco, arquivos e funções de servidor), Google OAuth, Google Play, Android/Google Play Services e Google ML Kit, serviços de push, Mercado Pago, Vercel (hospedagem), OpenFreeMap (mapas), HeiGIT/openrouteservice (endereços e rotas terrestres) e o provedor de pasta escolhido. Dados técnicos de conexão podem ser processados por esses serviços, sujeitos às suas próprias políticas.</p>
+    <p>Dados pessoais não são vendidos. Documentos e localização pessoal não são enviados automaticamente ao fornecedor AIS por cadastrar uma embarcação. Informações que o usuário compartilha com terceiros podem ser guardadas por seus destinatários, fora do controle do BordoAi.</p>
 
-    <h2>14. Retenção e exclusão</h2>
-    <p>O usuário pode excluir registros locais, limpar os dados do aplicativo e, quando autenticado, solicitar a exclusão da conta online, dos backups em nuvem e dos dados familiares associados à conta. A exclusão da conta online não apaga dados locais nem arquivos já salvos em pastas externas.</p>
-    <p>Uma assinatura com renovação ativa deve ser cancelada na Google Play antes da exclusão da conta online. Consulte <a href="/bordoai/excluir-conta">Excluir conta do BordoAi</a>.</p>
+    <h2 id="retencao">16. Retenção, interrupção e exclusão</h2>
+    <p>Cadastros locais são mantidos até alteração, exclusão ou limpeza no aparelho. Viagens e pontos sincronizados permanecem associados à conta até sua exclusão pelos controles disponíveis; encerrar uma viagem não a apaga. A presença social guarda a última posição conforme a autorização e a opção de retenção; desligar o compartilhamento impede novas consultas autorizadas dessa presença. Os limites de versões de backup e anexos estão descritos na seção 10.</p>
+    <p>O usuário pode solicitar a exclusão da conta e dos dados remotos associados no aplicativo ou pelo contato de privacidade. O fluxo inclui validação da titularidade; para solicitar exclusão de arquivos privados e versões de documentos que persistam ou se não conseguir concluir no app, utilize o e-mail de suporte. A exclusão da conta online não limpa automaticamente dados locais, arquivos externos ou cópias já salvas por destinatários. Informações de pagamentos mantidas pelos provedores e retenções necessárias por obrigação legal, segurança ou prevenção de fraude seguem suas finalidades aplicáveis; não são usadas para manter uma presença pública ativa.</p>
+    <p>Uma assinatura com renovação ativa deve ser cancelada no respectivo provedor antes de concluir o fluxo atual de exclusão pelo aplicativo. Excluir dados não substitui o cancelamento da renovação. Instruções e solicitação externa estão em <a href="https://terminais-lmc.vercel.app/bordoai/excluir-conta">Excluir conta do BordoAi</a> ou em <a href="mailto:alphaterminallmc@hotmail.com?subject=Privacidade%20e%20exclus%C3%A3o%20de%20dados%20BordoAi">alphaterminallmc@hotmail.com</a>.</p>
 
-    <h2>15. Crianças e adolescentes</h2>
+    <h2 id="publico">17. Crianças e adolescentes</h2>
     <p>O BordoAi é destinado a profissionais marítimos adultos e não foi desenvolvido ou direcionado a crianças.</p>
 
-    <h2>16. Alterações</h2>
+    <h2 id="alteracoes">18. Alterações</h2>
     <p>Esta política poderá ser atualizada quando recursos, fornecedores ou obrigações aplicáveis mudarem. A data da versão vigente será indicada nesta página.</p>
 
     <div class="notice"><strong>Aviso:</strong> o BordoAi é uma ferramenta independente de organização pessoal e profissional. Não representa a Autoridade Marítima, órgãos governamentais, empresas de navegação ou instituições certificadoras.</div>
 
     <footer>
-      <h2>17. Contato</h2>
+      <h2 id="contato">19. Contato</h2>
       <p><strong>Responsável:</strong> TerminaisLMC</p>
       <p><strong>Aplicativo:</strong> BordoAi</p>
       <p><strong>E-mail:</strong> <a href="mailto:alphaterminallmc@hotmail.com">alphaterminallmc@hotmail.com</a></p>
-      <p><a href="/">Voltar ao site da TerminaisLMC</a></p>
+      <p><a href="https://terminais-lmc.vercel.app/">Voltar ao site da TerminaisLMC</a></p>
     </footer>
   </main>
 </body>
 </html>
-
