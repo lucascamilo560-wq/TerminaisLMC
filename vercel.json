@@ -48,6 +48,10 @@
       "destination": "/bordoai-politica-de-privacidade.html"
     },
     {
+      "source": "/bordoai/politica-de-privacidade-atualizada",
+      "destination": "/bordoai-politica-de-privacidade.html"
+    },
+    {
       "source": "/bordoai/excluir-conta",
       "destination": "/bordoai-excluir-conta.html"
     },
