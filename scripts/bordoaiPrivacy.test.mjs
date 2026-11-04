@@ -6,9 +6,9 @@ const html = readFileSync(process.env.BORDOAI_PRIVACY_HTML || new URL('../public
 const text = html.replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ')
 
 test('public policy identifies the app, controller, date and privacy contact', () => {
-  for (const value of ['BordoAi', 'TerminaisLMC', '24 de outubro de 2026', 'mailto:alphaterminallmc@hotmail.com']) assert.ok(html.includes(value), value)
+  for (const value of ['BordoAi', 'TerminaisLMC', '4 de novembro de 2026', 'mailto:alphaterminallmc@hotmail.com']) assert.ok(html.includes(value), value)
   assert.match(html, /<title>Política de Privacidade/)
-  assert.match(html, /data-policy-version="2026-10-24"/)
+  assert.match(html, /data-policy-version="2026-11-04"/)
 })
 
 test('the policy is readable as plain HTML without scripts, forms or embedded documents', () => {
@@ -36,8 +36,16 @@ test('route storage, upload, recipients and persistent social last location are 
 })
 
 test('automatic backup and explicitly selected family document copies are disclosed', () => {
-  for (const value of ['Backup privado automático', 'automaticamente para backup privado', 'dez versões', 'Arquivos de certificados são versionados por conteúdo', 'Compartilhar documentos com a família é uma ação separada', 'cópias que um destinatário já tenha salvo']) assert.ok(text.includes(value), value)
+  for (const value of ['Backup privado automático', 'no máximo uma vez a cada 24 horas', 'fila local criptografada', 'três manifestos mais recentes', 'essa limpeza não os apaga', 'Compartilhar documentos com a família é uma ação separada', 'cópias que um destinatário já tenha salvo']) assert.ok(text.includes(value), value)
   assert.doesNotMatch(text, /backup em nuvem ocorre somente após solicitação|O uso local gratuito não exige cadastro|Conta online opcional/)
+})
+
+test('voluntary salary survey discloses account linkage, grouping, access and withdrawal', () => {
+  for (const value of ['Pesquisa salarial da comunidade', 'salário bruto mensal', 'vinculada à conta', 'não é anônima perante o serviço', 'é obrigatório manter uma contribuição válida', 'contas gratuitas e pagas', 'duas contas distintas por grupo', 'Não existe garantia de anonimato absoluto', 'Não publicamos mínimo e máximo', 'sem misturar países ou moedas', 'Retirar exclui o registro', 'não integra os dados estatísticos enviados']) assert.ok(text.includes(value), value)
+})
+
+test('professional country and private waypoints remain separate from live social location', () => {
+  for (const value of ['Não é inferido do GPS, idioma ou bandeira da embarcação', 'Waypoints criados pelo usuário são referências privadas da conta', 'A régua é temporária']) assert.ok(text.includes(value), value)
 })
 
 test('map, address, hosting and payment providers are covered', () => {
